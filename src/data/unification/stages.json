@@ -1,0 +1,227 @@
+{
+  "stages": [
+    {
+      "id": "UNI-01",
+      "order": 1,
+      "status": "draft",
+      "title": {
+        "ar": "مرحلة ما قبل الاسترداد",
+        "en": "The period before the recovery"
+      },
+      "dateLabel": {
+        "ar": "1891 - 1913م",
+        "en": "1891 – 1913"
+      },
+      "summary": {
+        "ar": "بعد سقوط الدولة السعودية الثانية، خضعت واحات المنطقة الشرقية (الأحساء والقطيف) للحكم العثماني المباشر. اتسمت تلك الفترة بتراجع الاستقرار الأمني والاقتصادي، وكثرة الاضطرابات التي أثرت على طرق التجارة وقوافل الحج، مما جعل الأهالي في حالة ترقب لعودة حكم يحقق الأمن ويجمع الكلمة.",
+        "en": "After the fall of the Second Saudi State, the oases of the Eastern Province (Al-Ahsa and Qatif) came under direct Ottoman rule. The period was marked by declining security and economic stability, and by frequent unrest that disrupted trade routes and pilgrim caravans, leaving the inhabitants awaiting the return of a rule that would restore security and unite the people."
+      },
+      "locationIds": [
+        "LOC-001",
+        "LOC-002"
+      ],
+      "personIds": [],
+      "eventIds": [
+        "HIS-003",
+        "HIS-004"
+      ],
+      "sourceIds": [
+        "SRC-015",
+        "SRC-016",
+        "SRC-017"
+      ],
+      "imageIds": [
+        "IMG-UNI-01"
+      ]
+    },
+    {
+      "id": "UNI-02",
+      "order": 2,
+      "status": "draft",
+      "title": {
+        "ar": "دخول الأحساء والقطيف",
+        "en": "The entry into Al-Ahsa and Qatif"
+      },
+      "dateLabel": {
+        "ar": "مايو 1913م - 1331هـ",
+        "en": "May 1913 – 1331 AH"
+      },
+      "summary": {
+        "ar": "في تحرك عسكري سريع ومفاجئ، دخل الملك عبدالعزيز مدينة المبرز ثم الهفوف ليلاً، وحاصر الحامية العثمانية في \"قصر إبراهيم\". انتهى الأمر باستسلام سلمي ومغادرة القوات العثمانية عبر البحر. بعد أيام قليلة، أرسل الملك عبدالعزيز قواته إلى القطيف التي انضمت سلماً وبترحيب من الأهالي، لتعود المنطقة إلى قلب الدولة السعودية.",
+        "en": "In a swift and surprise military move, King Abdulaziz entered the town of Al-Mubarraz and then Hofuf by night, and besieged the Ottoman garrison in \"Ibrahim Palace\". It ended in a peaceful surrender, with the Ottoman forces departing by sea. A few days later, King Abdulaziz sent his forces to Qatif, which joined peacefully and with the welcome of its people, returning the region to the heart of the Saudi state."
+      },
+      "locationIds": [
+        "LOC-001",
+        "LOC-011",
+        "LOC-002"
+      ],
+      "personIds": [],
+      "eventIds": [
+        "HIS-005"
+      ],
+      "sourceIds": [
+        "SRC-015",
+        "SRC-016",
+        "SRC-017"
+      ],
+      "imageIds": [
+        "IMG-UNI-02"
+      ]
+    },
+    {
+      "id": "UNI-03",
+      "order": 3,
+      "status": "draft",
+      "title": {
+        "ar": "تأمين الأطراف ورسم الحدود",
+        "en": "Securing the outlying areas and drawing the borders"
+      },
+      "dateLabel": {
+        "ar": "1914 - 1922م",
+        "en": "1914 – 1922"
+      },
+      "summary": {
+        "ar": "لم تقتصر جهود التوحيد على الحواضر الرئيسية، بل امتدت لتشمل كافة سواحل الخليج وأطراف المنطقة. تم تأمين مناطق مثل الجبيل، واستمرت الجهود الدبلوماسية والسياسية لتأمين الأجزاء الشمالية والجنوبية للمنطقة، والتي توجت بتوقيع \"معاهدة العقير\" التاريخية عام 1922م، التي رسمت الحدود بشكل رسمي وأرست استقراراً تاماً.",
+        "en": "The unification effort was not limited to the main towns; it extended to the entire Gulf coast and the outlying parts of the region. Areas such as Jubail were secured, and diplomatic and political efforts continued to secure the northern and southern parts of the region. These efforts culminated in the signing of the historic \"Uqair Treaty\" in 1922, which formally drew the borders and established lasting stability."
+      },
+      "locationIds": [
+        "LOC-007",
+        "LOC-010"
+      ],
+      "personIds": [],
+      "eventIds": [],
+      "sourceIds": [
+        "SRC-015",
+        "SRC-016",
+        "SRC-017"
+      ],
+      "imageIds": [
+        "IMG-UNI-03"
+      ]
+    },
+    {
+      "id": "UNI-04",
+      "order": 4,
+      "status": "draft",
+      "title": {
+        "ar": "عهد جديد مع توحيد المملكة",
+        "en": "A new era with the unification of the Kingdom"
+      },
+      "dateLabel": {
+        "ar": "سبتمبر 1932م - 1351هـ",
+        "en": "September 1932 – 1351 AH"
+      },
+      "summary": {
+        "ar": "عند إعلان توحيد \"المملكة العربية السعودية\"، كانت المنطقة الشرقية (أو مقاطعة الأحساء كما كانت تُعرف آنذاك) تعيش حالة من الأمن الإداري والسياسي المكتمل. أصبح هذا الاستقرار هو التمهيد الأهم للحدث التاريخي الذي غيّر وجه المنطقة لاحقاً، وهو اكتشاف النفط في أراضيها، لتنطلق مسيرة التنمية الحديثة.",
+        "en": "When the unification of the \"Kingdom of Saudi Arabia\" was declared, the Eastern Province (or the Province of Al-Ahsa, as it was then known) enjoyed full administrative and political security. This stability became the most important groundwork for the historic event that later transformed the region: the discovery of oil in its lands, which launched the journey of modern development."
+      },
+      "locationIds": [],
+      "personIds": [],
+      "eventIds": [
+        "HIS-005"
+      ],
+      "sourceIds": [
+        "SRC-015",
+        "SRC-016",
+        "SRC-017"
+      ],
+      "imageIds": [
+        "IMG-UNI-04"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-015",
+      "title": "تاريخ المملكة العربية السعودية — History of the Kingdom of Saudi Arabia",
+      "publisher": "د. عبدالله الصالح العثيمين — Dr. Abdullah Al-Saleh Al-Uthaymeen",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "مراحل توحيد المنطقة الشرقية",
+        "en": "Stages of the unification of the Eastern Province"
+      }
+    },
+    {
+      "id": "SRC-016",
+      "title": "شبه الجزيرة في عهد الملك عبدالعزيز — The Peninsula in the Reign of King Abdulaziz",
+      "publisher": "خير الدين الزركلي — Khair al-Din al-Zirikli",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "مراحل توحيد المنطقة الشرقية",
+        "en": "Stages of the unification of the Eastern Province"
+      }
+    },
+    {
+      "id": "SRC-017",
+      "title": "إصدارات تاريخ توحيد البلاد ومعاهدات الحدود — Publications on the unification and border treaties",
+      "publisher": "دارة الملك عبدالعزيز — King Abdulaziz Foundation for Research and Archives (Darah)",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "توحيد البلاد ومعاهدات الحدود",
+        "en": "The unification and border treaties"
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-UNI-01",
+      "file": "unification/unification1.jpg",
+      "alt": {
+        "ar": "صورة بالأبيض والأسود لمبنى طيني كبير في الأحساء، يمر أمامه أهالٍ وقافلة من الجمال",
+        "en": "Black-and-white photo of a large mud-brick building in Al-Ahsa, with people and a camel caravan passing in front"
+      },
+      "caption": {
+        "ar": "صورة تاريخية للاحساء",
+        "en": "A historical photograph of Al-Ahsa"
+      },
+      "sourceUrl": "https://imohadali.blogspot.com/2013/08/1908.html",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-UNI-02",
+      "file": "unification/unification2.jpg",
+      "alt": {
+        "ar": "صورة من أعلى لساحة مزدحمة بالرجال أمام مبنى ذي أقواس في الأحساء",
+        "en": "High-angle photo of a square crowded with men in front of an arcaded building in Al-Ahsa"
+      },
+      "caption": {
+        "ar": "الملك عبدالعزيز (أسفل يمين الصورة) متجهًا لمركز الأمارة في الاحساء",
+        "en": "King Abdulaziz (bottom right of the photo) heading to the seat of the emirate in Al-Ahsa"
+      },
+      "attribution": "Royal Geographical Society",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-UNI-03",
+      "file": "unification/unification3.jpg",
+      "alt": {
+        "ar": "الملك عبدالعزيز جالسًا أمام خيمة مع رجلين بلباس غربي",
+        "en": "King Abdulaziz seated in front of a tent with two men in Western dress"
+      },
+      "caption": {
+        "ar": "الملك عبدالعزيز (سلطان نجد وملحقاتها آنذاك) مع المندوب البريطاني أثناء توقيع معاهدة العقير",
+        "en": "King Abdulaziz (then Sultan of Najd and its Dependencies) with the British representative during the signing of the Uqair Treaty"
+      },
+      "sourceUrl": "https://ar.wikipedia.org/wiki/%D9%85%D8%B9%D8%A7%D9%87%D8%AF%D8%A9_%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%B1#/media/%D9%85%D9%84%D9%81:%D8%A7%D9%84%D9%85%D9%84%D9%83_%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2_%D9%85%D8%B9_%D8%A8%D9%88%D8%B3%D9%8A_%D9%83%D9%88%D9%83%D8%B3_%D9%81%D9%8A_%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%B1_%D8%B9%D8%A7%D9%85_1922.jpg",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-UNI-04",
+      "file": "unification/unification4.jpg",
+      "alt": {
+        "ar": "صفحة من جريدة أم القرى تنشر الأمر الملكي رقم 2716 بتحويل اسم الدولة",
+        "en": "A page of the Umm al-Qura newspaper publishing Royal Decree No. 2716 renaming the state"
+      },
+      "caption": {
+        "ar": "مرسوم ملكي يقضي بتحويل اسم الدولة إلى المملكة العربية السعودية",
+        "en": "Royal decree changing the name of the state to the Kingdom of Saudi Arabia"
+      },
+      "attribution": "King Abdulaziz Foundation for Research and Archives (Darah)",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    }
+  ]
+}

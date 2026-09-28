@@ -66,7 +66,7 @@ export function routeFor(id: string): string | null {
     case 'event': return `/timeline?event=${id}`;
     case 'stage': return `/unification?stage=${id}`;
     case 'visit': return `/royal-visits?visit=${id}`;
-    case 'person': return `/people/${id}`;
+    case 'person': return null; // the People section is not published
     case 'topic': return `/today?topic=${id}`;
   }
 }
@@ -115,11 +115,10 @@ export function relatedTo(id: string): AnyItem[] {
 /** Child locations (sites inside a governorate, etc.). */
 export const childrenOf = (id: string) => locations.filter((l) => l.parentId === id);
 
-/** Themes for a location: manual ones + `people` / `royal` derived from relations. */
+/** Themes for a location: manual ones + `royal` derived from relations. */
 export function themesOf(loc: Location): MapTheme[] {
   const themes = new Set(loc.themes);
   const rel = relatedTo(loc.id);
-  if (rel.some((r) => r.type === 'person')) themes.add('people');
   if (rel.some((r) => r.type === 'visit' || r.type === 'stage')) themes.add('royal');
   return [...themes];
 }

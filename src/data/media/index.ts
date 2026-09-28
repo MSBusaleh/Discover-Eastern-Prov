@@ -1,4 +1,5 @@
 import type { MediaAsset } from '@/types/content';
+import { unificationImages } from '../unification';
 
 /**
  * Image registry (brief §15.4). The prototype ships NO external photographs.
@@ -12,7 +13,7 @@ import type { MediaAsset } from '@/types/content';
 export const media: MediaAsset[] = [
   {
     id: 'IMG-001',
-    file: null, // e.g. 'images/locations/al-ahsa-oasis.webp' (put the file in public/images/...)
+    file: null, // a path under src/assets (e.g. 'unification/unification1.jpg') or under public/
     alt: { ar: 'نص بديل يصف الصورة', en: 'Alternative text describing the image' },
     caption: { ar: 'تعليق الصورة', en: 'Image caption' },
     sourceUrl: undefined,
@@ -22,6 +23,7 @@ export const media: MediaAsset[] = [
     accuracyReview: 'pending',
     rightsReview: 'pending',
   },
+  ...unificationImages,
 ];
 
 export const mediaById = new Map(media.map((m) => [m.id, m]));

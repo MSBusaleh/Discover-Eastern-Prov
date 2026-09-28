@@ -5,7 +5,6 @@ import { getLocation, routeFor } from '@/data';
 import { useLang } from '@/i18n/LanguageContext';
 import { Icon } from '@/components/ContentCards/Icon';
 import { MediaFrame } from '@/components/ContentCards/MediaFrame';
-import { RelatedLinks } from '@/components/ContentCards/RelatedLinks';
 import { SourceList } from '@/components/ContentCards/SourceList';
 import { StatusBadge } from '@/components/ContentCards/StatusBadge';
 import { Text } from '@/components/ContentCards/Text';
@@ -106,7 +105,6 @@ export function HistoricalTimeline({ events, selectedId, onSelect }: Props) {
               })}
             </div>
           )}
-          <RelatedLinks id={current.id} exclude={['location', 'event']} />
           <SourceList ids={current.sourceIds} />
         </div>
       </article>

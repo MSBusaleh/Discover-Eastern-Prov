@@ -413,17 +413,7 @@ html[lang='ar'] .card-head h2 { font-family: var(--f-display); font-weight: 600;
   .explore-map .map-canvas { height: 56vh; min-height: 320px; }
 }
 
-/* ---------------- Related / sources ---------------- */
-.related { display: flex; flex-direction: column; gap: 10px; border-block-start: 1px solid var(--c-line); padding-block-start: 14px; }
-.related-group { display: flex; flex-direction: column; gap: 4px; }
-.related-label { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 0.9rem; color: var(--c-ink-soft); }
-.related-list { display: flex; flex-direction: column; gap: 4px; }
-.related-link {
-  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 48px;
-  padding-inline: 12px; border-radius: var(--radius-sm); background: var(--c-ground); border: 1px solid transparent;
-  color: var(--c-ink); text-decoration: none; font-weight: 500; text-align: start;
-}
-.related-link:hover { border-color: var(--c-teal); color: var(--c-teal-ink); }
+/* ---------------- Sources ---------------- */
 .children { display: flex; flex-direction: column; gap: 6px; }
 .sources { font-size: 0.9rem; border-block-start: 1px solid var(--c-line); padding-block-start: 10px; }
 .sources summary { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; cursor: pointer; font-weight: 700; color: var(--c-ink-soft); }
@@ -434,7 +424,12 @@ html[lang='ar'] .card-head h2 { font-family: var(--f-display); font-weight: 600;
 /* ---------------- Media placeholder ---------------- */
 .media-frame { position: relative; width: 100%; max-width: 100%; margin: 0; border-radius: var(--radius-sm); overflow: hidden; background: var(--c-surface-2); }
 .media-frame img { width: 100%; height: 100%; object-fit: cover; }
-.media-credit { position: absolute; inset-inline-end: 0; bottom: 0; font-size: 0.72rem; padding: 2px 8px; background: rgb(0 0 0 / 0.55); color: #fff; }
+.media-figure { display: flex; flex-direction: column; gap: 8px; margin: 0; min-width: 0; }
+.media-frame.is-image { display: grid; place-items: center; }
+.media-frame.is-image img { height: auto; max-height: min(70vh, 560px); object-fit: contain; }
+.media-caption { display: flex; flex-direction: column; gap: 4px; font-size: 1.1rem; line-height: 1.6; font-weight: 500; color: var(--c-ink); padding-inline-start: 10px; border-inline-start: 3px solid var(--c-gold); }
+.media-credit { font-size: 0.92rem; font-weight: 400; color: var(--c-ink-soft); overflow-wrap: anywhere; }
+.media-credit a { color: var(--c-teal-ink); }
 .placeholder-pattern {
   position: absolute; inset: 0; background: var(--c-teal); opacity: 0.13;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 6l3.5 10.5L34 20l-10.5 3.5L20 34l-3.5-10.5L6 20l10.5-3.5z' fill='none' stroke='black' stroke-width='1.2'/%3E%3C/svg%3E") repeat;
@@ -444,7 +439,7 @@ html[lang='ar'] .card-head h2 { font-family: var(--f-display); font-weight: 600;
 .placeholder-label { font-weight: 700; color: var(--c-ink); font-size: 1.05rem; }
 .placeholder-note { font-size: 0.8rem; color: var(--c-ink-soft); background: var(--c-surface); padding: 1px 8px; border-radius: 4px; }
 
-/* ---------------- Detail card (timeline / unification / people / visits) ---------------- */
+/* ---------------- Detail card (timeline / unification / visits) ---------------- */
 .detail-card {
   display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px;
   background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow);
@@ -556,35 +551,6 @@ html[lang='ar'] .detail-body h1, html[lang='ar'] .detail-body > h2:not(.eyebrow)
 .visit-card-body { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 14px; }
 .visit-place { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; color: var(--c-teal-ink); }
 .visit-occasion { font-size: 0.92rem; }
-
-/* ---------------- People ---------------- */
-.people { display: flex; flex-direction: column; gap: 16px; }
-.select-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.select-field { display: flex; flex-direction: column; gap: 4px; font-weight: 700; font-size: 0.9rem; }
-.select-field select { min-height: var(--tap); padding-inline: 12px; border-radius: var(--radius-sm); border: 1.5px solid var(--c-line); background: var(--c-surface); color: var(--c-ink); font-weight: 500; }
-.origin-key { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 0.88rem; color: var(--c-ink-soft); }
-.origin-key p { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
-.origin-tag { display: inline-flex; align-items: center; gap: 4px; font-size: 0.78rem; font-weight: 700; padding: 2px 9px; border-radius: 999px; }
-.origin-from-region { background: var(--c-primary); color: var(--c-on-primary); }
-.origin-from-region::before { content: '●'; font-size: 0.6rem; }
-.origin-associated { border: 1.5px solid var(--c-teal); color: var(--c-teal-ink); }
-.origin-associated::before { content: '○'; font-size: 0.7rem; }
-.person-card { height: 100%; display: flex; align-items: center; gap: 14px; padding: 14px; border-radius: var(--radius); background: var(--c-surface); border: 1.5px solid var(--c-line); color: var(--c-ink); text-decoration: none; }
-.person-card:hover { border-color: var(--c-teal); }
-.person-card > .icon { margin-inline-start: auto; color: var(--c-ink-soft); }
-.person-card-body { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; min-width: 0; }
-.person-name { font-weight: 700; font-size: 1.05rem; }
-.person-fields { font-size: 0.86rem; color: var(--c-ink-soft); }
-.portrait { flex-shrink: 0; border-radius: var(--radius-sm); object-fit: cover; }
-.portrait-md { width: 76px; height: 92px; }
-.portrait-lg { width: 100%; max-width: 320px; aspect-ratio: 4 / 5; height: auto; }
-.portrait-placeholder {
-  display: grid; place-items: center; background: var(--c-teal-soft); color: var(--c-teal-ink);
-  font-family: var(--f-display); font-weight: 600; font-size: 2rem;
-  background-image: repeating-linear-gradient(135deg, transparent 0 10px, rgb(23 112 122 / 0.08) 10px 11px);
-}
-.portrait-lg.portrait-placeholder { font-size: 5rem; }
-@media (max-width: 760px) { .select-row { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------------- Today & Tomorrow ---------------- */
 .page-today .page-header h1 { font-size: clamp(1.7rem, 1.1rem + 2.4vw, 2.7rem); color: var(--c-primary); }
@@ -703,8 +669,6 @@ html[lang='ar'] .page-title { font-family: var(--f-display); font-weight: 600; }
 .page-today .page-title { color: var(--c-primary); }
 .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .pill-row .pill-link { border: 0; font: inherit; font-weight: 700; font-size: 0.92rem; min-height: 44px; }
-.related { border-block-start: 1px solid var(--c-line); padding-block-start: 14px; gap: 10px; }
-.related-title { font-size: 0.95rem; color: var(--c-ink-soft); }
 .explore-panel .place-list { background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--radius); padding-inline: 8px; }
 .explore-panel .place-row { min-height: 56px; font-size: 1.05rem; justify-content: space-between; }
 .explore-panel .place-list li:last-child .place-row { border-block-end: 0; }
@@ -742,7 +706,7 @@ html[lang='ar'] .page-title { font-family: var(--f-display); font-weight: 600; }
 /* ---------------- Motion ---------------- */
 /* Every animated element starts from, and ends at, a fully visible state. */
 body { transition: background-color 0.35s ease, color 0.35s ease; }
-.site-header, .location-card, .detail-card, .entry-card, .chip, .pill-link, .interest-card, .person-card, .visit-card, .place-row, .map-modes {
+.site-header, .location-card, .detail-card, .entry-card, .chip, .pill-link, .interest-card, .visit-card, .place-row, .map-modes {
   transition: background-color 0.35s ease, border-color 0.2s ease, color 0.35s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 @keyframes page-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
@@ -782,3 +746,27 @@ body { transition: background-color 0.35s ease, color 0.35s ease; }
 .geo-urban { fill: var(--c-urban); }
 .geo-road { stroke: var(--c-road); stroke-linecap: round; stroke-linejoin: round; }
 .geo-road-major { stroke: var(--c-road-major); }
+
+/* ---------------- Return banner (map opened from another page) ---------------- */
+.return-banner {
+  display: flex; align-items: center; gap: 14px; width: 100%;
+  min-height: calc(var(--tap) + 16px); padding: 12px 18px;
+  border-radius: var(--radius); background: var(--c-gold); color: #1c1402;
+  text-decoration: none; box-shadow: var(--shadow);
+  animation: return-pulse 1.6s ease-out 0.3s 2;
+}
+.return-banner:hover { filter: brightness(1.06); }
+.return-banner:hover .return-icon { transform: translateX(-4px); }
+html[dir='rtl'] .return-banner:hover .return-icon { transform: translateX(4px); }
+.return-icon {
+  display: grid; place-items: center; flex-shrink: 0; width: 46px; height: 46px;
+  border-radius: 50%; background: #1c1402; color: var(--c-gold); transition: transform 0.2s ease;
+}
+.return-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.return-text strong { font-size: 1.15rem; }
+.return-text span { font-size: 0.95rem; opacity: 0.85; }
+@keyframes return-pulse {
+  0% { box-shadow: 0 0 0 0 rgb(201 142 30 / 0.6); }
+  100% { box-shadow: 0 0 0 16px rgb(201 142 30 / 0); }
+}
+@media (prefers-reduced-motion: reduce) { .return-banner { animation: none; } }

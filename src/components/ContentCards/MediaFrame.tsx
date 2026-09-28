@@ -1,4 +1,5 @@
 import { isDisplayable, mediaById } from '@/data';
+import { mediaUrl } from '@/data/media/assets';
 import { useLang } from '@/i18n/LanguageContext';
 import { Icon, type IconName } from './Icon';
 
@@ -14,10 +15,24 @@ export function MediaFrame({
   const img = imageIds.map((id) => mediaById.get(id)).find(isDisplayable);
 
   if (img) {
+    // A real image keeps its own proportions (portraits and documents must not be cropped).
+    const credit = img.attribution ?? (img.sourceUrl ? new URL(img.sourceUrl).hostname.replace(/^www\./, '') : null);
     return (
-      <figure className="media-frame" style={{ aspectRatio: ratio }}>
-        <img src={img.file} alt={L(img.alt)} loading="lazy" decoding="async" />
-        {img.attribution && <figcaption className="media-credit">{img.attribution}</figcaption>}
+      <figure className="media-figure">
+        <div className="media-frame is-image">
+          <img src={mediaUrl(img.file)} alt={L(img.alt)} loading="lazy" decoding="async" />
+        </div>
+        {(img.caption || credit) && (
+          <figcaption className="media-caption">
+            {img.caption && <span>{L(img.caption)}</span>}
+            {credit && (
+              <span className="media-credit">
+                {t('imageSource')}:{' '}
+                {img.sourceUrl ? <a href={img.sourceUrl} target="_blank" rel="noopener noreferrer">{credit}</a> : credit}
+              </span>
+            )}
+          </figcaption>
+        )}
       </figure>
     );
   }

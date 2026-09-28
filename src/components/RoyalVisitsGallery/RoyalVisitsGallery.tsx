@@ -5,7 +5,6 @@ import { getKing, getLocation, kings, routeFor } from '@/data';
 import { useLang } from '@/i18n/LanguageContext';
 import { Chip } from '@/components/ContentCards/Chip';
 import { Icon } from '@/components/ContentCards/Icon';
-import { RelatedLinks } from '@/components/ContentCards/RelatedLinks';
 import { SourceList } from '@/components/ContentCards/SourceList';
 import { StatusBadge } from '@/components/ContentCards/StatusBadge';
 import { Text } from '@/components/ContentCards/Text';
@@ -59,7 +58,6 @@ export function RoyalVisitsGallery({ visits, selectedId, onSelect }: { visits: R
                 return to && loc ? <Link key={id} to={to} className="btn btn-secondary"><Icon name="pin" size={18} /> {L(loc.name)}</Link> : null;
               })}
             </div>
-            <RelatedLinks id={selected.id} exclude={['location']} />
             <SourceList ids={selected.sourceIds} />
           </div>
         </article>

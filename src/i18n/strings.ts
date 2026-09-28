@@ -28,7 +28,6 @@ export const strings = {
   navTimeline: s('رحلة عبر الزمن', 'Journey Through Time'),
   navUnification: s('الشرقية ومسيرة التوحيد', 'The Eastern Province and Saudi Unification'),
   navRoyal: s('ملوك المملكة في الشرقية', 'Saudi Kings in the Eastern Province'),
-  navPeople: s('شخصيات من الشرقية', 'People of the Eastern Province'),
   navToday: s('الشرقية اليوم وغدًا', 'The Eastern Province: Today & Tomorrow'),
   navSources: s('المصادر والحقوق', 'Sources & credits'),
 
@@ -36,13 +35,11 @@ export const strings = {
   shortTimeline: s('عبر الزمن', 'Timeline'),
   shortUnification: s('التوحيد', 'Unification'),
   shortRoyal: s('الملوك', 'Kings'),
-  shortPeople: s('شخصيات', 'People'),
   shortToday: s('اليوم وغدًا', 'Today & Tomorrow'),
 
   blurbTimeline: s('آلاف السنين من التاريخ قبل النفط', 'Thousands of years of history before oil'),
   blurbUnification: s('من الأحساء 1913م إلى إعلان المملكة 1932م', 'From Al-Ahsa in 1913 to the Kingdom in 1932'),
   blurbRoyal: s('زيارات ملوك المملكة إلى الشرقية', 'Royal visits to the province'),
-  blurbPeople: s('شخصيات صنعت تاريخ المنطقة وحاضرها', 'People who shaped the region'),
   blurbToday: s('سياحة وصناعة وتعليم وروابط خليجية', 'Tourism, industry, education, Gulf links'),
 
   // Home
@@ -72,17 +69,16 @@ export const strings = {
   placesInside: s('مواقع داخلها', 'Places inside'),
   coordinates: s('الإحداثيات', 'Coordinates'),
   coordsNeedReview: s('إحداثيات بحاجة إلى تحقق', 'Coordinates need review'),
+  backTo: s('العودة إلى', 'Back to'),
   backToMap: s('العودة إلى الخريطة', 'Back to the map'),
   viewOnMap: s('عرض على الخريطة', 'View on map'),
   zoomTo: s('تكبير إلى الموقع', 'Zoom to place'),
   openCard: s('عرض البطاقة', 'Open card'),
 
   // Related
-  related: s('اكتشف أيضًا', 'See also'),
   relEvents: s('أحداث تاريخية', 'Historical events'),
   relStages: s('مسيرة التوحيد', 'Unification'),
   relVisits: s('زيارات ملكية', 'Royal visits'),
-  relPeople: s('شخصيات', 'People'),
   relTopics: s('اليوم وغدًا', 'Today & Tomorrow'),
   relPlaces: s('مواقع', 'Places'),
   nothingRelated: s('لا يوجد محتوى مرتبط بعد.', 'No linked content yet.'),
@@ -91,6 +87,7 @@ export const strings = {
   pendingText: s('المحتوى قيد الإعداد', 'Content coming soon'),
   imagePending: s('صورة بانتظار الاعتماد', 'Image awaiting approval'),
   sources: s('المصادر', 'Sources'),
+  imageSource: s('المصدر', 'Source'),
   noSources: s('المصدر سيُضاف مع المحتوى المعتمد.', 'Source will be added with the approved content.'),
 
   // Timeline
@@ -121,18 +118,7 @@ export const strings = {
   photoPending: s('الصورة التاريخية تُضاف بعد التحقق من مصدرها وحقوقها', 'Historical photo added only after its source and rights are verified'),
   noVisits: s('لا توجد زيارات لهذا الاختيار بعد.', 'No visits for this selection yet.'),
 
-  // People
-  peopleIntro: s('صفِّ الشخصيات حسب المجال أو الموقع أو صلتها بالمنطقة.', 'Filter people by field, place or their link to the region.'),
-  field: s('المجال', 'Field'),
-  place: s('الموقع', 'Place'),
-  origin: s('الصلة بالمنطقة', 'Link to the region'),
   all: s('الكل', 'All'),
-  biography: s('نبذة', 'Biography'),
-  contributions: s('أبرز الإسهامات', 'Key contributions'),
-  connection: s('الصلة بالمنطقة الشرقية', 'Connection to the Eastern Province'),
-  allPeople: s('كل الشخصيات', 'All people'),
-  noPeople: s('لا توجد شخصيات لهذا الاختيار.', 'No people match this selection.'),
-  period: s('الفترة', 'Period'),
 
   // Today
   todayQuestion: s('ماذا تريد أن تكتشف في الشرقية؟', 'What would you like to discover?'),

@@ -1,4 +1,5 @@
 import type { Source } from '@/types/content';
+import { unificationSources } from '../unification';
 
 /**
  * Source registry. Every factual item points here by ID.
@@ -28,6 +29,7 @@ export const sources: Source[] = [
   { id: 'SRC-012', title: 'Qasr Ibrahim', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Qasr_Ibrahim', accessed: '2026-09-25', usedFor: { ar: 'تأكيد موقع قصر إبراهيم', en: 'Cross-check of Ibrahim Palace location' }, replaceBeforeLaunch: true },
   { id: 'SRC-013', title: 'Thāj (Q1528269)', publisher: 'Wikidata', url: 'https://www.wikidata.org/wiki/Q1528269', accessed: '2026-09-25', usedFor: { ar: 'مقارنة إحداثيات ثاج (يوجد اختلاف)', en: 'Thaj coordinate cross-check (values differ)' }, replaceBeforeLaunch: true },
   { id: 'SRC-014', title: '1:10m Admin 0 countries and Admin 1 states/provinces', publisher: 'Natural Earth', url: 'https://www.naturalearthdata.com/', accessed: '2026-09-27', usedFor: { ar: 'خريطة الأساس وحدود المنطقة الشرقية', en: 'Basemap and Eastern Province outline' } },
+  ...unificationSources,
 ];
 
 export const sourceById = new Map(sources.map((s) => [s.id, s]));

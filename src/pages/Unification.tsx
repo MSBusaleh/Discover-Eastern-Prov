@@ -4,10 +4,11 @@ import { useLang } from '@/i18n/LanguageContext';
 import { PageHeader } from '@/components/ContentCards/PageHeader';
 import { Icon } from '@/components/ContentCards/Icon';
 import { MediaFrame } from '@/components/ContentCards/MediaFrame';
-import { RelatedLinks } from '@/components/ContentCards/RelatedLinks';
 import { SourceList } from '@/components/ContentCards/SourceList';
 import { StatusBadge } from '@/components/ContentCards/StatusBadge';
 import { Text } from '@/components/ContentCards/Text';
+import type { BackState } from './Explore';
+import { strings } from '@/i18n/strings';
 
 /** A to-scale strip that keeps 1913 and 1932 visibly apart (brief §7.1). */
 function Chronology({ active }: { active: number }) {
@@ -41,6 +42,14 @@ export default function Unification() {
   const goTo = (i: number) => stages[i] && setParams({ stage: stages[i].id }, { replace: true });
 
   if (!stage) return null;
+  const backState: BackState = {
+    backTo: `/unification?stage=${stage.id}`,
+    backLabel: strings.navUnification,
+    backDetail: {
+      ar: `${strings.stage.ar} ${stage.order}: ${stage.title.ar}`,
+      en: `${strings.stage.en} ${stage.order}: ${stage.title.en}`,
+    },
+  };
   return (
     <div className="page page-unification">
       <PageHeader icon="flag" title={t('navUnification')} />
@@ -76,12 +85,11 @@ export default function Unification() {
                 const loc = getLocation(id);
                 const to = routeFor(id);
                 return loc && to ? (
-                  <Link key={id} to={to} className="btn btn-secondary"><Icon name="pin" size={18} /> {t('viewOnMap')}: {L(loc.name)}</Link>
+                  <Link key={id} to={to} state={backState} className="btn btn-secondary"><Icon name="pin" size={18} /> {t('viewOnMap')}: {L(loc.name)}</Link>
                 ) : null;
               })}
             </div>
           )}
-          <RelatedLinks id={stage.id} exclude={['location']} />
           <SourceList ids={stage.sourceIds} />
         </div>
       </article>

@@ -4,7 +4,6 @@ import { kindLabels, siteTypeLabels } from '@/data/taxonomy';
 import { useLang } from '@/i18n/LanguageContext';
 import { Icon } from '@/components/ContentCards/Icon';
 import { MediaFrame } from '@/components/ContentCards/MediaFrame';
-import { RelatedLinks } from '@/components/ContentCards/RelatedLinks';
 import { SourceList } from '@/components/ContentCards/SourceList';
 import { StatusBadge } from '@/components/ContentCards/StatusBadge';
 import { Text } from '@/components/ContentCards/Text';
@@ -49,7 +48,6 @@ export function LocationCard({ loc, onClose, onSelect }: { loc: Location; onClos
         </ul>
       )}
 
-      <RelatedLinks id={loc.id} exclude={['location']} />
       <SourceList ids={loc.sourceIds} />
     </article>
   );

@@ -20,7 +20,7 @@ export const siteTypeLabels: Record<SiteType, LocalizedText> = {
   industrial: { ar: 'موقع صناعي', en: 'Industrial site' },
 };
 
-export const themeOrder: MapTheme[] = ['history', 'culture', 'nature', 'energy', 'people', 'royal'];
+export const themeOrder: MapTheme[] = ['history', 'culture', 'nature', 'energy', 'royal'];
 
 export const themeLabels: Record<MapTheme, LocalizedText> = {
   history: { ar: 'التاريخ والآثار', en: 'History & Archaeology' },
