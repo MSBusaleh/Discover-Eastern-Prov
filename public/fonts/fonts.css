@@ -1,0 +1,19 @@
+/*
+ * Saudi Ministry of Culture typefaces:
+ *   "Saudi"   (الخط السعودي) → body text
+ * Download from https://engage.moc.gov.sa/e/fonts/ and place the files in this
+ * folder with the names below. Any of .woff2 / .woff / .ttf / .otf works;
+ * missing files fall back silently to IBM Plex Sans Arabic / Reem Kufi.
+ */
+@font-face {
+  font-family: 'Saudi';
+  font-weight: 400; font-style: normal; font-display: swap;
+  src: url('Saudi-Regular.woff2') format('woff2'), url('Saudi-Regular.woff') format('woff'),
+       url('SAUDI-REGULAR.TTF') format('truetype'), url('Saudi-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Saudi';
+  font-weight: 700; font-style: normal; font-display: swap;
+  src: url('Saudi-Bold.woff2') format('woff2'), url('Saudi-Bold.woff') format('woff'),
+       url('SAUDI-BOLD.TTF') format('truetype'), url('Saudi-Bold.otf') format('opentype');
+}
