@@ -12,6 +12,7 @@ import { personalities } from '../src/data/personalities';
 import { contemporaryTopics } from '../src/data/contemporary-topics';
 import { sources } from '../src/data/sources';
 import { media } from '../src/data/media';
+import photos from '../src/data/media/photos.json';
 
 const errors: string[] = [];
 const all = [...locations, ...historicalEvents, ...unificationStages, ...kingReigns, ...personalities, ...contemporaryTopics];
@@ -35,6 +36,10 @@ for (const x of all as unknown as Record<string, unknown>[]) {
 for (const l of locations) {
   if (l.parentId && !locations.some((p) => p.id === l.parentId)) errors.push(`${l.id} → unknown parent ${l.parentId}`);
   if (l.coordinates && !sourceIds.has(l.coordinates.sourceId)) errors.push(`${l.id} coordinates have no valid sourceId`);
+}
+
+for (const m of media) {
+  if (m.file && !(m.file in photos)) errors.push(`${m.id} → photo "${m.file}" not found; put it in images/ and run npm run images`);
 }
 
 const byStatus = { demo: 0, draft: 0, approved: 0 };

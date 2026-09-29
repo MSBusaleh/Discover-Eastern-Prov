@@ -9,6 +9,9 @@ import { Footer } from '@/components/Navigation/Footer';
 import { IdleReset } from '@/components/Booth/IdleReset';
 import Home from '@/pages/Home';
 import Explore from '@/pages/Explore';
+import { media } from '@/data';
+import { isDisplayable } from '@/data/media';
+import { preloadPhotos } from '@/data/media/assets';
 
 // Map pages load eagerly (they're the core). Other sections are split out.
 const Timeline = lazy(() => import('@/pages/Timeline'));
@@ -24,7 +27,22 @@ function ScrollOnRoute() {
   return null;
 }
 
+/**
+ * Once the first page has settled, fetch every published photo in the
+ * background, so the Timeline, Unification and Kings pages open with their
+ * photos already downloaded and cached.
+ */
+function usePhotoPreload() {
+  useEffect(() => {
+    const start = () => preloadPhotos(media.filter(isDisplayable).map((m) => m.file));
+    const idle = (window as { requestIdleCallback?: (cb: () => void) => number }).requestIdleCallback;
+    const id = idle ? idle(start) : window.setTimeout(start, 1500);
+    return () => { if (!idle) window.clearTimeout(id); };
+  }, []);
+}
+
 function Shell() {
+  usePhotoPreload();
   const booth = useBoothMode();
   const location = useLocation();
   const isHome = location.pathname === '/';

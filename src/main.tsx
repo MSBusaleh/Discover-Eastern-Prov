@@ -17,3 +17,11 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 );
+
+// Keep photos in a local cache after their first download (see public/sw.js).
+// Skipped in development and when the single-file build is opened from disk.
+if (import.meta.env.PROD && 'serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => { /* caching is optional */ });
+  });
+}

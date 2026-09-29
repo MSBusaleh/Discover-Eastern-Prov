@@ -427,6 +427,18 @@ html[lang='ar'] .card-head h2 { font-family: var(--f-display); font-weight: 600;
 .media-figure { display: flex; flex-direction: column; gap: 8px; margin: 0; min-width: 0; }
 .media-frame.is-image { display: grid; place-items: center; }
 .media-frame.is-image img { height: auto; max-height: min(70vh, 560px); object-fit: contain; }
+/* Photo loading: the blurred preview fills the photo's space until the photo fades in. */
+.photo { position: relative; }
+.photo-blur { position: absolute; inset: 0; width: 100%; height: 100% !important; max-height: none !important; filter: blur(14px); transform: scale(1.02); transition: opacity 0.4s ease; }
+.photo-img { position: relative; opacity: 0; transition: opacity 0.4s ease; }
+.photo.is-loaded .photo-img { opacity: 1; }
+.photo.is-loaded .photo-blur { opacity: 0; }
+.photo.is-loading .photo-blur { animation: photo-pulse 1.4s ease-in-out infinite; }
+@keyframes photo-pulse { 50% { opacity: 0.6; } }
+@media (prefers-reduced-motion: reduce) {
+  .photo-img, .photo-blur { transition: none; }
+  .photo.is-loading .photo-blur { animation: none; }
+}
 .media-caption { display: flex; flex-direction: column; gap: 4px; font-size: 1.1rem; line-height: 1.6; font-weight: 500; color: var(--c-ink); padding-inline-start: 10px; border-inline-start: 3px solid var(--c-gold); }
 .media-credit { font-size: 0.92rem; font-weight: 400; color: var(--c-ink-soft); overflow-wrap: anywhere; }
 .media-credit a { color: var(--c-teal-ink); }

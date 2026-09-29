@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "description": "Discover the Eastern Province — interactive booth website prototype (SPE KFUPM Student Chapter, National Day 2026)",
   "scripts": {
+    "predev": "npm run images",
     "dev": "vite",
+    "prebuild": "npm run images",
     "build": "tsc -b && vite build",
+    "prebuild:single": "npm run images",
     "build:single": "tsc -b && vite build --mode single",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "check:content": "tsx --tsconfig tsconfig.json scripts/check-content.ts"
+    "check:content": "tsx --tsconfig tsconfig.json scripts/check-content.ts",
+    "images": "node scripts/optimize-images.mjs"
   },
   "license": "UNLICENSED",
   "dependencies": {
@@ -28,6 +32,7 @@
     "@types/react": "^18.3.31",
     "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^4.7.0",
+    "sharp": "^0.33.5",
     "tsx": "^4.23.15",
     "typescript": "^5.9.3",
     "vite": "^5.4.21",
