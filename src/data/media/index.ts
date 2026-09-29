@@ -1,5 +1,6 @@
 import type { MediaAsset } from '@/types/content';
 import { unificationImages } from '../unification';
+import { timelineImages } from '../historical-events';
 
 /**
  * Image registry (brief §15.4). The prototype ships NO external photographs.
@@ -24,6 +25,7 @@ export const media: MediaAsset[] = [
     rightsReview: 'pending',
   },
   ...unificationImages,
+  ...timelineImages,
 ];
 
 export const mediaById = new Map(media.map((m) => [m.id, m]));

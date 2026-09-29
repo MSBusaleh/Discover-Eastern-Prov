@@ -32,7 +32,7 @@ export const contemporaryTopics: ContemporaryTopic[] = [
       ar: 'سلسلة جسور وطرق تربط المملكة العربية السعودية بمملكة البحرين من الخبر، افتُتحت رسميًا في 25 نوفمبر 1986م.',
       en: 'A series of causeways and bridges linking Saudi Arabia with Bahrain from Al-Khobar, officially opened on 25 November 1986.',
     },
-    locationIds: ['LOC-006'], sourceIds: ['SRC-006'], imageIds: [], relatedIds: ['HIS-008'],
+    locationIds: ['LOC-006'], sourceIds: ['SRC-006'], imageIds: [],
   },
   {
     id: 'CT-003', status: 'draft', stage: 'existing', categoryIds: ['energy', 'business'],

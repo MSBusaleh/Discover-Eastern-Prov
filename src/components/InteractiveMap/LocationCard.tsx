@@ -9,7 +9,7 @@ import { StatusBadge } from '@/components/ContentCards/StatusBadge';
 import { Text } from '@/components/ContentCards/Text';
 
 /** Card for a selected place: picture, name, one line, then where to go next. */
-export function LocationCard({ loc, onClose, onSelect }: { loc: Location; onClose: () => void; onSelect: (id: string) => void }) {
+export function LocationCard({ loc, onClose, onSelect }: { loc: Location; onClose?: () => void; onSelect: (id: string) => void }) {
   const { L, t } = useLang();
   const parent = loc.parentId ? getLocation(loc.parentId) : undefined;
   const children = childrenOf(loc.id);
@@ -18,9 +18,11 @@ export function LocationCard({ loc, onClose, onSelect }: { loc: Location; onClos
   return (
     <article className="location-card" aria-labelledby={`${loc.id}-title`}>
       <div className="card-top">
-        <button type="button" className="text-btn" onClick={onClose}>
-          <Icon name="back" size={18} /> {t('backToMap')}
-        </button>
+        {onClose && (
+          <button type="button" className="text-btn" onClick={onClose}>
+            <Icon name="back" size={18} /> {t('backToMap')}
+          </button>
+        )}
         <StatusBadge status={loc.status} />
       </div>
 

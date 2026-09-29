@@ -7,5 +7,4 @@ export const sections: { path: string; icon: IconName; label: StringKey; short: 
   { path: '/timeline', icon: 'clock', label: 'navTimeline', short: 'shortTimeline', blurb: 'blurbTimeline' },
   { path: '/unification', icon: 'flag', label: 'navUnification', short: 'shortUnification', blurb: 'blurbUnification' },
   { path: '/royal-visits', icon: 'crown', label: 'navRoyal', short: 'shortRoyal', blurb: 'blurbRoyal' },
-  { path: '/today', icon: 'spark', label: 'navToday', short: 'shortToday', blurb: 'blurbToday' },
 ];

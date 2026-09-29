@@ -67,7 +67,7 @@ export function routeFor(id: string): string | null {
     case 'stage': return `/unification?stage=${id}`;
     case 'visit': return `/royal-visits?visit=${id}`;
     case 'person': return null; // the People section is not published
-    case 'topic': return `/today?topic=${id}`;
+    case 'topic': return null; // the Today & Tomorrow section is not published
   }
 }
 

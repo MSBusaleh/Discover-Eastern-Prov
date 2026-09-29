@@ -1,0 +1,365 @@
+{
+  "events": [
+    {
+      "id": "HIS-001",
+      "status": "draft",
+      "era": "ancient",
+      "sortYear": -5000,
+      "dateLabel": {
+        "ar": "أكثر من 5000 ق.م",
+        "en": "Over 5,000 BCE"
+      },
+      "title": {
+        "ar": "تاروت... جذور حضارية تمتد لآلاف السنين",
+        "en": "Tarout: civilisational roots reaching back thousands of years"
+      },
+      "summary": {
+        "ar": "تقع قلعة تاروت قبالة ساحل القطيف، حوالي 30كم من مدينة الدمام، ويرجع تاريخ الجزيرة المعروف إلى أكثر من خمسة آلاف عام قبل الميلاد، تعتبر من أقدم الأماكن المعمورة في الجزيرة العربية ومركزا بارزا لمملكة دلمون وهي حضارة حكمت على طرق تجارة الجزيرة العربية منذ أكثر من 4000 سنة.",
+        "en": "Tarout Castle lies off the coast of Qatif, about 30 km from Dammam. The island's known history reaches back more than five thousand years BCE, making it one of the oldest inhabited places in the Arabian Peninsula and a prominent centre of Dilmun, a civilisation that controlled the Arabian Peninsula's trade routes more than 4,000 years ago."
+      },
+      "locationIds": [
+        "LOC-003"
+      ],
+      "personIds": [],
+      "sourceIds": [
+        "SRC-018"
+      ],
+      "imageIds": [
+        "IMG-HIS-01"
+      ]
+    },
+    {
+      "id": "HIS-002",
+      "status": "draft",
+      "era": "classical",
+      "sortYear": -300,
+      "dateLabel": {
+        "ar": "القرون الأخيرة قبل الميلاد",
+        "en": "Last centuries BCE"
+      },
+      "title": {
+        "ar": "ثاج... مركز حضاري وتجاري من العالم القديم",
+        "en": "Thaj: an urban and trading centre of the ancient world"
+      },
+      "summary": {
+        "ar": "برزت مدينة ثاج في شرق شبه الجزيرة العربية خلال القرون الأخيرة قبل الميلاد، وكانت مركزًا حضريًا وتجاريًا مهمًا يربط طرق القوافل بين الخليج وجنوب العراق ومناطق داخل الجزيرة العربية. وتكشف بقايا أسوارها ومدافنها ومقتنياتها الأثرية عن ازدهار المدينة وأهميتها في المنطقة قبل الإسلام.",
+        "en": "The city of Thaj rose to prominence in the east of the Arabian Peninsula during the last centuries BCE. It was an important urban and trading centre linking caravan routes between the Gulf, southern Iraq and the interior of the Peninsula. The remains of its walls, its burials and its archaeological finds reveal the city's prosperity and its importance in the region before Islam."
+      },
+      "locationIds": [
+        "LOC-009"
+      ],
+      "personIds": [],
+      "sourceIds": [
+        "SRC-019"
+      ],
+      "imageIds": [
+        "IMG-HIS-02"
+      ]
+    },
+    {
+      "id": "HIS-003",
+      "status": "draft",
+      "era": "islamic",
+      "sortYear": 630,
+      "dateLabel": {
+        "ar": "القرن السابع الميلادي",
+        "en": "7th century CE"
+      },
+      "title": {
+        "ar": "جواثا... شاهد على بدايات الإسلام في الشرقية",
+        "en": "Jawatha: a witness to the beginnings of Islam in the Eastern Province"
+      },
+      "summary": {
+        "ar": "شهدت المنطقة الشرقية حضورًا مبكرًا للإسلام مع إسلام قبيلة عبدالقيس في الأحساء، لتبدأ مرحلة جديدة في تاريخ المنطقة ومجتمعها. ويُعد مسجد جواثا، الذي أُنشئ في القرن السابع الميلادي، أحد أبرز الشواهد الباقية على هذه المرحلة المبكرة ومكانة الأحساء في تاريخ الإسلام بشرق الجزيرة العربية.",
+        "en": "Islam reached the Eastern Province early, when the Abd al-Qays tribe of Al-Ahsa embraced it, opening a new chapter in the history of the region and its society. Jawatha Mosque, built in the 7th century CE, is one of the most notable surviving witnesses to this early period and to Al-Ahsa's place in the history of Islam in eastern Arabia."
+      },
+      "locationIds": [
+        "LOC-001"
+      ],
+      "personIds": [],
+      "sourceIds": [
+        "SRC-020"
+      ],
+      "imageIds": [
+        "IMG-HIS-03"
+      ]
+    },
+    {
+      "id": "HIS-005",
+      "status": "draft",
+      "era": "unification",
+      "sortYear": 1913,
+      "dateLabel": {
+        "ar": "1913م",
+        "en": "1913"
+      },
+      "title": {
+        "ar": "الشرقية ضمن مسيرة توحيد المملكة",
+        "en": "The Eastern Province in the unification of the Kingdom"
+      },
+      "summary": {
+        "ar": "شهد عام 1913م محطة مهمة في تاريخ المنطقة الشرقية، حين استعاد الملك عبدالعزيز الأحساء ثم امتد الحكم السعودي إلى القطيف. مثّل انضمام المنطقة خطوة مهمة في مسيرة توحيد الدولة، وعزّز وصولها إلى ساحل الخليج العربي ومكانتها الجغرافية والاقتصادية.",
+        "en": "1913 was a milestone in the history of the Eastern Province, when King Abdulaziz recovered Al-Ahsa and Saudi rule then extended to Qatif. The region's joining was an important step in the unification of the state, securing its access to the Arabian Gulf coast and strengthening its geographic and economic standing."
+      },
+      "locationIds": [
+        "LOC-001",
+        "LOC-002"
+      ],
+      "personIds": [],
+      "sourceIds": [
+        "SRC-021"
+      ],
+      "imageIds": [
+        "IMG-HIS-04"
+      ],
+      "relatedIds": [
+        "UNI-02"
+      ]
+    },
+    {
+      "id": "HIS-006",
+      "status": "draft",
+      "era": "oil",
+      "sortYear": 1938,
+      "dateLabel": {
+        "ar": "1938م",
+        "en": "1938"
+      },
+      "title": {
+        "ar": "بئر الخير... بداية عصر جديد",
+        "en": "The Well of Prosperity: the start of a new era"
+      },
+      "summary": {
+        "ar": "في عام 1938م بدأ إنتاج النفط بكميات تجارية من بئر الدمام رقم 7، الذي عُرف لاحقًا باسم «بئر الخير». مثّل هذا الاكتشاف نقطة تحول في تاريخ المنطقة الشرقية، ومهّد لمرحلة جديدة من النمو الاقتصادي والصناعي وتطور قطاع الطاقة في المملكة.",
+        "en": "In 1938, oil began flowing in commercial quantities from Dammam Well No. 7, later known as the “Well of Prosperity”. The discovery was a turning point in the history of the Eastern Province and paved the way for a new phase of economic and industrial growth and for the development of the Kingdom's energy sector."
+      },
+      "locationIds": [
+        "LOC-004"
+      ],
+      "personIds": [],
+      "sourceIds": [
+        "SRC-022"
+      ],
+      "imageIds": [
+        "IMG-HIS-05"
+      ],
+      "relatedIds": [
+        "RV-001"
+      ]
+    },
+    {
+      "id": "HIS-007",
+      "status": "draft",
+      "era": "modern",
+      "sortYear": 1975,
+      "dateLabel": {
+        "ar": "1975 - 1977م",
+        "en": "1975 – 1977"
+      },
+      "title": {
+        "ar": "الجبيل الصناعية... انطلاقة جديدة للتنمية الصناعية",
+        "en": "Jubail Industrial City: a new launch for industrial development"
+      },
+      "summary": {
+        "ar": "شهدت السبعينيات بداية تحول صناعي كبير في المنطقة الشرقية، مع تأسيس الهيئة الملكية للجبيل وينبع عام 1975 لتطوير الجبيل كمدينة صناعية حديثة تدعم تنويع الاقتصاد السعودي. وفي عام 1977 وضع الملك خالد حجر الأساس لمدينة الجبيل الصناعية، لتبدأ مرحلة توسعت فيها الصناعات البتروكيماوية والبنية التحتية والإنتاج الصناعي في المنطقة.",
+        "en": "The 1970s saw the start of a major industrial transformation in the Eastern Province, with the founding of the Royal Commission for Jubail and Yanbu in 1975 to develop Jubail as a modern industrial city supporting the diversification of the Saudi economy. In 1977, King Khalid laid the foundation stone of Jubail Industrial City, beginning a phase in which petrochemical industries, infrastructure and industrial output expanded across the region."
+      },
+      "locationIds": [
+        "LOC-007"
+      ],
+      "personIds": [],
+      "sourceIds": [
+        "SRC-023"
+      ],
+      "imageIds": [
+        "IMG-HIS-06"
+      ]
+    },
+    {
+      "id": "HIS-009",
+      "status": "draft",
+      "era": "modern",
+      "sortYear": 2018,
+      "dateLabel": {
+        "ar": "2018م",
+        "en": "2018"
+      },
+      "title": {
+        "ar": "واحة الأحساء... إرث عالمي",
+        "en": "Al-Ahsa Oasis: a world heritage"
+      },
+      "summary": {
+        "ar": "في عام 2018م أُدرجت واحة الأحساء ضمن قائمة التراث العالمي لليونسكو باعتبارها مشهدًا ثقافيًا متطورًا يعكس تفاعل الإنسان مع البيئة عبر آلاف السنين. وتجمع الواحة بين النخيل والعيون والقنوات المائية والمواقع الأثرية والمباني التاريخية، لتوثق استمرارية الاستيطان والحياة الزراعية في المنطقة منذ عصور مبكرة وحتى الحاضر.",
+        "en": "In 2018, Al-Ahsa Oasis was inscribed on the UNESCO World Heritage List as an evolving cultural landscape reflecting human interaction with the environment over thousands of years. The oasis brings together palm groves, springs, water channels, archaeological sites and historic buildings, documenting continuous settlement and farming life in the region from early times to the present."
+      },
+      "locationIds": [
+        "LOC-001"
+      ],
+      "personIds": [],
+      "sourceIds": [
+        "SRC-024"
+      ],
+      "imageIds": [
+        "IMG-HIS-07"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-018",
+      "title": "قلعة تاروت من أقدم مواقع الاستيطان البشري",
+      "publisher": "Qpedia",
+      "url": "https://www.qpedia.org/ar/topics/11346/%D9%82%D9%84%D8%B9%D8%A9-%D8%AA%D8%A7%D8%B1%D9%88%D8%AA-%D9%85%D9%86-%D8%A3%D9%82%D8%AF%D9%85-%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%8A%D8%B7%D8%A7%D9%86-%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D9%8A",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "نص محطة تاروت وصورتها",
+        "en": "Tarout timeline entry and image"
+      }
+    },
+    {
+      "id": "SRC-019",
+      "title": "Thaj Historical City",
+      "publisher": "Saudipedia",
+      "url": "https://saudipedia.com/en/thaj-historical-city",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "نص محطة ثاج وصورتها",
+        "en": "Thaj timeline entry and image"
+      }
+    },
+    {
+      "id": "SRC-020",
+      "title": "Jawatha Archaeological Site",
+      "publisher": "Saudipedia",
+      "url": "https://saudipedia.com/en/jawatha-archaeological-site",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "نص محطة جواثا وصورتها",
+        "en": "Jawatha timeline entry and image"
+      }
+    },
+    {
+      "id": "SRC-021",
+      "title": "Unification of Saudi Arabia",
+      "publisher": "Saudipedia",
+      "url": "https://saudipedia.com/en/unification-of-saudi-arabia",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "نص محطة التوحيد في الخط الزمني وصورتها",
+        "en": "Unification timeline entry and image"
+      }
+    },
+    {
+      "id": "SRC-022",
+      "title": "Our history",
+      "publisher": "Aramco",
+      "url": "https://www.aramco.com/en/about-us/our-history",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "نص محطة بئر الخير",
+        "en": "Well of Prosperity timeline entry"
+      }
+    },
+    {
+      "id": "SRC-023",
+      "title": "Royal Commission for Jubail and Yanbu — agency page",
+      "publisher": "my.gov.sa",
+      "url": "https://my.gov.sa/en/agencies/17411",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "نص محطة الجبيل الصناعية",
+        "en": "Jubail Industrial City timeline entry"
+      }
+    },
+    {
+      "id": "SRC-024",
+      "title": "Al-Ahsa Oasis, an Evolving Cultural Landscape",
+      "publisher": "UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/1563",
+      "accessed": "2026-09-28",
+      "usedFor": {
+        "ar": "نص محطة واحة الأحساء",
+        "en": "Al-Ahsa Oasis timeline entry"
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-HIS-01",
+      "file": "timeline/timeline1.jpg",
+      "alt": {
+        "ar": "صورة جوية لقلعة تاروت بأبراجها الدائرية وسط البلدة",
+        "en": "Aerial view of Tarout Castle and its round towers in the town"
+      },
+      "sourceUrl": "https://www.qpedia.org/ar/topics/11346/%D9%82%D9%84%D8%B9%D8%A9-%D8%AA%D8%A7%D8%B1%D9%88%D8%AA-%D9%85%D9%86-%D8%A3%D9%82%D8%AF%D9%85-%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%8A%D8%B7%D8%A7%D9%86-%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D9%8A",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-HIS-02",
+      "file": "timeline/timeline2.jpg",
+      "alt": {
+        "ar": "فريق تنقيب أثري يعمل بين أساسات مبانٍ قديمة في ثاج",
+        "en": "An archaeological team excavating ancient building foundations at Thaj"
+      },
+      "sourceUrl": "https://saudipedia.com/en/thaj-historical-city",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-HIS-03",
+      "file": "timeline/timeline3.jpg",
+      "alt": {
+        "ar": "مسجد جواثا بجدرانه الطينية الفاتحة وبرجه المسنن",
+        "en": "Jawatha Mosque with its pale earthen walls and crenellated tower"
+      },
+      "sourceUrl": "https://saudipedia.com/en/jawatha-archaeological-site",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-HIS-04",
+      "file": "timeline/timeline4.jpg",
+      "alt": {
+        "ar": "صورة تاريخية لقافلة من راكبي الجمال يحملون الرايات في الصحراء",
+        "en": "Historical photo of a camel-mounted column carrying banners across the desert"
+      },
+      "sourceUrl": "https://saudipedia.com/en/unification-of-saudi-arabia",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-HIS-05",
+      "file": "timeline/timeline5.jpg",
+      "alt": {
+        "ar": "بئر الدمام رقم 7 قديمًا بأبراج الحفر، وموقعه اليوم محاطًا بساحة مرصوفة",
+        "en": "Dammam Well No. 7 then, with its drilling derricks, and its site today set in a paved plaza"
+      },
+      "sourceUrl": "https://slaati.com/2020/07/22/p1697625.html",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-HIS-06",
+      "file": "timeline/timeline6.jpg",
+      "alt": {
+        "ar": "صورة جوية للواجهة البحرية في مدينة الجبيل الصناعية",
+        "en": "Aerial view of the waterfront of Jubail Industrial City"
+      },
+      "sourceUrl": "https://saudipedia.com/%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A7%D9%84%D8%AC%D8%A8%D9%8A%D9%84-%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-HIS-07",
+      "file": "timeline/timeline7.jpg",
+      "alt": {
+        "ar": "صورة جوية لطريق ترابي بين بساتين النخيل في واحة الأحساء",
+        "en": "Aerial view of a dirt track between palm groves in Al-Ahsa Oasis"
+      },
+      "sourceUrl": "https://saudipedia.com/%D9%88%D8%A7%D8%AD%D8%A9-%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    }
+  ]
+}

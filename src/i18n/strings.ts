@@ -28,19 +28,16 @@ export const strings = {
   navTimeline: s('رحلة عبر الزمن', 'Journey Through Time'),
   navUnification: s('الشرقية ومسيرة التوحيد', 'The Eastern Province and Saudi Unification'),
   navRoyal: s('ملوك المملكة في الشرقية', 'Saudi Kings in the Eastern Province'),
-  navToday: s('الشرقية اليوم وغدًا', 'The Eastern Province: Today & Tomorrow'),
   navSources: s('المصادر والحقوق', 'Sources & credits'),
 
   shortExplore: s('الخريطة', 'Map'),
   shortTimeline: s('عبر الزمن', 'Timeline'),
   shortUnification: s('التوحيد', 'Unification'),
   shortRoyal: s('الملوك', 'Kings'),
-  shortToday: s('اليوم وغدًا', 'Today & Tomorrow'),
 
   blurbTimeline: s('آلاف السنين من التاريخ قبل النفط', 'Thousands of years of history before oil'),
   blurbUnification: s('من الأحساء 1913م إلى إعلان المملكة 1932م', 'From Al-Ahsa in 1913 to the Kingdom in 1932'),
   blurbRoyal: s('زيارات ملوك المملكة إلى الشرقية', 'Royal visits to the province'),
-  blurbToday: s('سياحة وصناعة وتعليم وروابط خليجية', 'Tourism, industry, education, Gulf links'),
 
   // Home
   homeMapHint: s('اضغط على أي موقع لتبدأ', 'Tap any place to begin'),
@@ -79,7 +76,6 @@ export const strings = {
   relEvents: s('أحداث تاريخية', 'Historical events'),
   relStages: s('مسيرة التوحيد', 'Unification'),
   relVisits: s('زيارات ملكية', 'Royal visits'),
-  relTopics: s('اليوم وغدًا', 'Today & Tomorrow'),
   relPlaces: s('مواقع', 'Places'),
   nothingRelated: s('لا يوجد محتوى مرتبط بعد.', 'No linked content yet.'),
 
@@ -120,12 +116,6 @@ export const strings = {
 
   all: s('الكل', 'All'),
 
-  // Today
-  todayQuestion: s('ماذا تريد أن تكتشف في الشرقية؟', 'What would you like to discover?'),
-  todayHint: s('اختر اهتمامًا لعرض المحتوى المرتبط به.', 'Choose an interest to see what fits it.'),
-  stageLegend: s('نميّز بين ما هو قائم وما هو قيد التطوير وما هو مخطط له.', 'We separate what exists today from what is being built and what is planned.'),
-  otherInterests: s('اهتمامات أخرى', 'Other interests'),
-  noTopics: s('سيُضاف محتوى هذا الاهتمام قريبًا.', 'Content for this interest is coming.'),
 
   // Booth
   idleTitle: s('هل ما زلت تستكشف؟', 'Still exploring?'),

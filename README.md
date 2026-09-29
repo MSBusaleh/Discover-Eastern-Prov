@@ -88,7 +88,6 @@ scripts/check-content.ts   content integrity checker
 | `/#/timeline?event=HIS-001` | 2 · Journey Through Time |
 | `/#/unification?stage=UNI-02` | 3 · Unification (four stages) |
 | `/#/royal-visits?visit=RV-001` | 4 · Kings in the Eastern Province |
-| `/#/today?cat=energy` · `?topic=CT-002` | 5 · Today & Tomorrow |
 | `/#/sources` | Sources, image credits, map attribution |
 
 ---
@@ -145,11 +144,11 @@ automatically. Run `npm run check:content` to see how many items are in each sta
 | Content | File | Notes |
 |---|---|---|
 | Places | `src/data/locations/index.ts` | `kind` (governorate / city / island / site), `siteType`, `parentId`, `coordinates` **with `sourceId`**, `themes`, `summary` |
-| Timeline events | `src/data/historical-events/index.ts` | `dateLabel` (display, per language), `sortYear` (number, negative = BCE), `era`, links |
+| Timeline events | `src/data/historical-events/events.json` (images in `src/assets/timeline/`) | `dateLabel` (display, per language), `sortYear` (number, negative = BCE), `era`, links |
 | Unification stages | `src/data/unification/stages.json` | keep 4 stages, `order` 1–4; the file also holds their sources and images |
 | Kings / royal visits | `src/data/royal-visits/index.ts` | replace the three sample visits |
 | People | `src/data/personalities/index.ts` | **not published** — the People section was removed from the site; the data is kept for a possible return |
-| Today & Tomorrow | `src/data/contemporary-topics/index.ts` | `stage`: `existing` / `in-progress` / `announced` |
+| Today & Tomorrow | `src/data/contemporary-topics/index.ts` | **not published** — the Today & Tomorrow tab was removed from the site; the data is kept for a possible return |
 | References | `src/data/sources/index.ts` | one entry per source, referenced by `sourceIds` |
 | Images | `src/data/media/index.ts` + `public/images/…` | see below |
 | Interface wording | `src/i18n/strings.ts` | Arabic and English side by side |

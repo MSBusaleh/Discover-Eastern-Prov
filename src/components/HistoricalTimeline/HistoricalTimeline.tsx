@@ -8,6 +8,8 @@ import { MediaFrame } from '@/components/ContentCards/MediaFrame';
 import { SourceList } from '@/components/ContentCards/SourceList';
 import { StatusBadge } from '@/components/ContentCards/StatusBadge';
 import { Text } from '@/components/ContentCards/Text';
+import { strings } from '@/i18n/strings';
+import type { BackState } from '@/pages/Explore';
 
 interface Props {
   events: HistoricalEvent[];
@@ -54,6 +56,11 @@ export function HistoricalTimeline({ events, selectedId, onSelect }: Props) {
   };
 
   if (!current) return null;
+  const backState: BackState = {
+    backTo: `/timeline?event=${current.id}`,
+    backLabel: strings.navTimeline,
+    backDetail: current.title,
+  };
 
   return (
     <div className="timeline">
@@ -98,7 +105,7 @@ export function HistoricalTimeline({ events, selectedId, onSelect }: Props) {
                 const loc = getLocation(id);
                 const to = routeFor(id);
                 return loc && to ? (
-                  <Link key={id} to={to} className="btn btn-secondary">
+                  <Link key={id} to={to} state={backState} className="btn btn-secondary">
                     <Icon name="pin" size={18} /> {t('viewOnMap')}: {L(loc.name)}
                   </Link>
                 ) : null;

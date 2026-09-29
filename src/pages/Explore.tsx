@@ -22,13 +22,21 @@ export default function Explore() {
   const { state } = useLocation();
   const [back] = useState(() => (state as BackState | null)?.backTo ? (state as BackState) : null);
   const { view, setView, themes, setThemes, mode, setMode } = useExploreState();
+
+  // Opened from a "View on map" button: show only the map, the place and the way back.
+  useEffect(() => {
+    if (!back) return;
+    const root = document.documentElement;
+    root.classList.add('map-focus');
+    return () => root.classList.remove('map-focus');
+  }, [back]);
   const [fitSignal, setFitSignal] = useState(0);
   const panelRef = useRef<HTMLDivElement>(null);
 
   const selectedId = params.get('loc');
   const selected = selectedId ? getLocation(selectedId) : undefined;
   // One filter at a time keeps the choice simple.
-  const active = themes[0] ?? null;
+  const active = back ? null : themes[0] ?? null;
 
   const filtered = useMemo(
     () => (active ? locations.filter((l) => themesOf(l).includes(active)) : locations),
@@ -48,7 +56,7 @@ export default function Explore() {
 
   return (
     <div className="page page-explore">
-      <PageHeader icon="map" title={t('navExplore')} />
+      {!back && <PageHeader icon="map" title={t('navExplore')} />}
 
       {back && (
         <Link to={back.backTo} className="return-banner">
@@ -60,12 +68,12 @@ export default function Explore() {
         </Link>
       )}
 
-      <div className="filters" role="group" aria-label={t('filters')}>
+      {!back && <div className="filters" role="group" aria-label={t('filters')}>
         <Chip selected={!active} onClick={() => pickTheme(null)}>{t('all')}</Chip>
         {themeOrder.map((th) => (
           <Chip key={th} selected={active === th} onClick={() => pickTheme(th)}>{L(themeLabels[th])}</Chip>
         ))}
-      </div>
+      </div>}
 
       <div className="explore-grid">
         <div className="explore-map">
@@ -73,7 +81,7 @@ export default function Explore() {
         </div>
         <div className="explore-panel" ref={panelRef} aria-live="polite">
           {selected ? (
-            <LocationCard key={selected.id} loc={selected} onClose={clearSelection} onSelect={select} />
+            <LocationCard key={selected.id} loc={selected} onClose={back ? undefined : clearSelection} onSelect={select} />
           ) : (
             <LocationList locations={filtered} onSelect={select} />
           )}

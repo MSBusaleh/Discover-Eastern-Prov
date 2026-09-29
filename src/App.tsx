@@ -14,7 +14,6 @@ import Explore from '@/pages/Explore';
 const Timeline = lazy(() => import('@/pages/Timeline'));
 const Unification = lazy(() => import('@/pages/Unification'));
 const RoyalVisits = lazy(() => import('@/pages/RoyalVisits'));
-const TodayTomorrow = lazy(() => import('@/pages/TodayTomorrow'));
 const Sources = lazy(() => import('@/pages/Sources'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
@@ -44,7 +43,6 @@ function Shell() {
             <Route path="/timeline" element={<Timeline />} />
             <Route path="/unification" element={<Unification />} />
             <Route path="/royal-visits" element={<RoyalVisits />} />
-            <Route path="/today" element={<TodayTomorrow />} />
             <Route path="/sources" element={<Sources />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
