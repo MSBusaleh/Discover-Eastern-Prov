@@ -30,8 +30,8 @@ export const locations: Location[] = [
     },
     themes: ['history', 'culture', 'nature'],
     summary: {
-      ar: 'محافظة تتمحور حول واحة الأحساء، ومدينتها الرئيسة الهفوف.',
-      en: 'A governorate centred on the Al-Ahsa oasis; Al-Hofuf is its main city.',
+      ar: 'محافظة تحتضن واحة الأحساء، ومدينتها الرئيسة الهفوف.',
+      en: 'A governorate built around the Al-Ahsa Oasis, with Al-Hofuf as its main city.',
     },
     sourceIds: ['SRC-001'],
     imageIds: [],
@@ -106,7 +106,7 @@ export const locations: Location[] = [
     themes: ['energy'],
     summary: {
       ar: 'مقر إمارة المنطقة الشرقية وأكبر مدنها، ومدينة ميناء على الخليج العربي.',
-      en: 'The seat and largest city of the Eastern Province, and a port city on the Arabian Gulf.',
+      en: 'The capital and largest city of the Eastern Province, and a port on the Arabian Gulf.',
     },
     sourceIds: ['SRC-005'],
     imageIds: [],
@@ -179,8 +179,8 @@ export const locations: Location[] = [
       sourceId: 'SRC-009',
       review: 'needs-review',
       note: {
-        ar: 'تختلف الإحداثيات بين المصادر (ويكيبيديا وويكي بيانات) بنحو 5 كم — يلزم التحقق.',
-        en: 'Sources disagree by about 5 km (Wikipedia vs Wikidata) — needs verification.',
+        ar: 'تختلف الإحداثيات بين ويكيبيديا وويكي بيانات بنحو 5 كم، وتحتاج إلى تحقق.',
+        en: 'Wikipedia and Wikidata place it about 5 km apart, so this still needs checking.',
       },
     },
     themes: ['history'],

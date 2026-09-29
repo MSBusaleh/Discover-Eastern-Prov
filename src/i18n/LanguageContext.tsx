@@ -12,7 +12,8 @@ interface LanguageApi {
   /** Interface string by key. */
   t: (key: StringKey) => string;
   /** Pick the current language from a content field. */
-  L: (text: LocalizedText | undefined) => string;
+  /** Text in the current language. A plain string is the same in both languages. */
+  L: (text: LocalizedText | string | undefined) => string;
   /** Number formatting (Western digits in both languages). */
   n: (value: number) => string;
   /** Join a list with the language's comma. */
@@ -46,7 +47,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setLang,
     toggle: () => setLang(lang === 'ar' ? 'en' : 'ar'),
     t: (key) => strings[key][lang],
-    L: (text) => (text ? text[lang] : ''),
+    L: (text) => (typeof text === 'string' ? text : text ? text[lang] : ''),
     // Western digits in both languages: Saudi official usage commonly keeps them
     // for dates, and it keeps years/coordinates identical across languages.
     n: (value) => value.toLocaleString(lang === 'ar' ? 'ar-SA-u-nu-latn' : 'en-US', { useGrouping: false }),

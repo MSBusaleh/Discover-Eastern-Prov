@@ -1,4 +1,5 @@
 import { isDisplayable, mediaById } from '@/data';
+import { creditOf } from '@/data/media';
 import { mediaUrl } from '@/data/media/assets';
 import { useLang } from '@/i18n/LanguageContext';
 import { Icon, type IconName } from './Icon';
@@ -16,7 +17,7 @@ export function MediaFrame({
 
   if (img) {
     // A real image keeps its own proportions (portraits and documents must not be cropped).
-    const credit = img.attribution ?? (img.sourceUrl ? new URL(img.sourceUrl).hostname.replace(/^www\./, '') : null);
+    const credit = creditOf(img);
     return (
       <figure className="media-figure">
         <div className="media-frame is-image">

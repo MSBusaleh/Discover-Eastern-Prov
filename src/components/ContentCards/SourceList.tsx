@@ -4,7 +4,7 @@ import { Icon } from './Icon';
 
 /** Compact, expandable list of the sources behind an item. */
 export function SourceList({ ids }: { ids: string[] }) {
-  const { t } = useLang();
+  const { t, L } = useLang();
   const list = ids.map((id) => sourceById.get(id)).filter((s): s is NonNullable<typeof s> => !!s);
   if (list.length === 0) return null;
   return (
@@ -14,8 +14,9 @@ export function SourceList({ ids }: { ids: string[] }) {
         <ul>
           {list.map((s) => (
             <li key={s.id}>
-              <span className="mono small">{s.id}</span>{' '}
-              {s.url ? <a href={s.url} target="_blank" rel="noopener noreferrer">{s.publisher}: {s.title} <Icon name="external" size={14} /></a> : <span>{s.publisher}: {s.title}</span>}
+              {s.url
+                ? <a href={s.url} target="_blank" rel="noopener noreferrer">{L(s.publisher)}: {L(s.title)} <Icon name="external" size={14} /></a>
+                : <span>{L(s.publisher)}: {L(s.title)}</span>}
             </li>
           ))}
         </ul>

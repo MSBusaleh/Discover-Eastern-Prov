@@ -44,13 +44,4 @@ export const siteConfig = {
     /** Countdown shown before the reset, with a "Keep exploring" button. */
     warningSeconds: 15,
   },
-
-  /**
-   * Logo slots. Leave `src` null to show a labelled placeholder.
-   * Do not add the SPE logo until the approved file and usage terms are confirmed.
-   */
-  logos: [
-    { id: 'spe-kfupm', label: { ar: 'شعار فرع SPE بجامعة الملك فهد (بانتظار الاعتماد)', en: 'SPE KFUPM logo (awaiting approval)' }, src: null as string | null },
-    { id: 'event', label: { ar: 'شعار الفعالية (بانتظار الاعتماد)', en: 'Event logo (awaiting approval)' }, src: null as string | null },
-  ],
 };

@@ -1,0 +1,660 @@
+{
+  "reigns": [
+    {
+      "id": "KING-01",
+      "order": 1,
+      "status": "draft",
+      "name": {
+        "ar": "الملك عبدالعزيز",
+        "en": "King Abdulaziz"
+      },
+      "reign": {
+        "ar": "1932 - 1953م",
+        "en": "1932 – 1953"
+      },
+      "title": {
+        "ar": "بداية عصر النفط",
+        "en": "The dawn of the oil age"
+      },
+      "summary": {
+        "ar": "بدأ التنقيب عن النفط في المنطقة الشرقية عام 1933، وفي عام 1938 تدفّق النفط بكميات تجارية من بئر الدمام رقم 7، ثم أبحرت أول شحنة تصدير من رأس تنورة عام 1939. كانت هذه المحطات بداية تحوّل اقتصادي جعل الشرقية قلب صناعة الطاقة في المملكة.",
+        "en": "Oil exploration began in the Eastern Province in 1933. In 1938 oil flowed in commercial quantities from Dammam Well No. 7, and in 1939 the first export shipment sailed from Ras Tanura. Together, these milestones set off the economic shift that made the Eastern Province the heart of the Kingdom’s energy industry."
+      },
+      "milestones": [
+        {
+          "year": "1933",
+          "text": {
+            "ar": "بدء التنقيب عن النفط في الشرقية",
+            "en": "Oil exploration begins in the Eastern Province"
+          }
+        },
+        {
+          "year": "1938",
+          "text": {
+            "ar": "تدفّق النفط بكميات تجارية من بئر الدمام رقم 7",
+            "en": "Oil flows in commercial quantities from Dammam Well No. 7"
+          }
+        },
+        {
+          "year": "1939",
+          "text": {
+            "ar": "أول شحنة نفط تُصدَّر من رأس تنورة",
+            "en": "The first oil shipment is exported from Ras Tanura"
+          }
+        }
+      ],
+      "locationIds": [
+        "LOC-004",
+        "LOC-008"
+      ],
+      "sourceIds": [
+        "SRC-025",
+        "SRC-026"
+      ],
+      "imageIds": [
+        "IMG-KING-01"
+      ],
+      "relatedIds": [
+        "HIS-006"
+      ]
+    },
+    {
+      "id": "KING-02",
+      "order": 2,
+      "status": "draft",
+      "name": {
+        "ar": "الملك سعود",
+        "en": "King Saud"
+      },
+      "reign": {
+        "ar": "1953 - 1964م",
+        "en": "1953 – 1964"
+      },
+      "title": {
+        "ar": "توسّع الطاقة والبنية التحتية والتعليم",
+        "en": "Growth in energy, infrastructure and education"
+      },
+      "summary": {
+        "ar": "اتّسع دور الشرقية الاقتصادي في عهد الملك سعود وتطوّرت بنيتها التحتية؛ فبدأ الإنتاج من حقل السفانية البحري عام 1957، وافتتح الملك سعود ميناء الملك عبدالعزيز في الدمام عام 1961، وتأسست كلية البترول والمعادن في الظهران عام 1963 لإعداد الكفاءات التي يحتاجها قطاع الطاقة.",
+        "en": "Under King Saud, the Eastern Province took on a larger economic role and its infrastructure grew. Production began at the offshore Safaniyah field in 1957, King Saud opened King Abdulaziz Port in Dammam in 1961, and the College of Petroleum and Minerals was founded in Dhahran in 1963 to train the people the energy sector needed."
+      },
+      "milestones": [
+        {
+          "year": "1957",
+          "text": {
+            "ar": "بدء الإنتاج من حقل السفانية البحري",
+            "en": "Production begins at the offshore Safaniyah field"
+          }
+        },
+        {
+          "year": "1961",
+          "text": {
+            "ar": "افتتاح ميناء الملك عبدالعزيز في الدمام",
+            "en": "King Abdulaziz Port opens in Dammam"
+          }
+        },
+        {
+          "year": "1963",
+          "text": {
+            "ar": "تأسيس كلية البترول والمعادن في الظهران",
+            "en": "The College of Petroleum and Minerals is founded in Dhahran"
+          }
+        }
+      ],
+      "locationIds": [
+        "LOC-005",
+        "LOC-004"
+      ],
+      "sourceIds": [
+        "SRC-027",
+        "SRC-028",
+        "SRC-029"
+      ],
+      "imageIds": [
+        "IMG-KING-02"
+      ]
+    },
+    {
+      "id": "KING-03",
+      "order": 3,
+      "status": "draft",
+      "name": {
+        "ar": "الملك فيصل",
+        "en": "King Faisal"
+      },
+      "reign": {
+        "ar": "1964 - 1975م",
+        "en": "1964 – 1975"
+      },
+      "title": {
+        "ar": "التعليم والتصنيع وبداية انتقال ملكية أرامكو",
+        "en": "Education, industry and the start of Saudi ownership of Aramco"
+      },
+      "summary": {
+        "ar": "توسّع التعليم والصناعة في الشرقية في عهد الملك فيصل؛ فقد افتتح كلية البترول والمعادن في الظهران عام 1965، وتأسست أول مدينة صناعية في الدمام عام 1973. وفي الفترة نفسها بدأت الحكومة السعودية رفع حصتها في أرامكو، من 25% عام 1973 إلى 60% في العام التالي.",
+        "en": "Education and industry expanded in the Eastern Province under King Faisal. He opened the College of Petroleum and Minerals in Dhahran in 1965, and the first industrial city was founded in Dammam in 1973. In the same period the Saudi government began raising its stake in Aramco, from 25% in 1973 to 60% the following year."
+      },
+      "milestones": [
+        {
+          "year": "1965",
+          "text": {
+            "ar": "افتتاح كلية البترول والمعادن في الظهران",
+            "en": "The College of Petroleum and Minerals opens in Dhahran"
+          }
+        },
+        {
+          "year": "1973",
+          "text": {
+            "ar": "تأسيس أول مدينة صناعية في الدمام",
+            "en": "The first industrial city is founded in Dammam"
+          }
+        },
+        {
+          "year": "1973 - 1974",
+          "text": {
+            "ar": "رفع حصة الحكومة في أرامكو من 25% إلى 60%",
+            "en": "The government stake in Aramco rises from 25% to 60%"
+          }
+        }
+      ],
+      "locationIds": [
+        "LOC-004",
+        "LOC-005"
+      ],
+      "sourceIds": [
+        "SRC-030",
+        "SRC-022"
+      ],
+      "imageIds": [
+        "IMG-KING-03"
+      ]
+    },
+    {
+      "id": "KING-04",
+      "order": 4,
+      "status": "draft",
+      "name": {
+        "ar": "الملك خالد",
+        "en": "King Khalid"
+      },
+      "reign": {
+        "ar": "1975 - 1982م",
+        "en": "1975 – 1982"
+      },
+      "title": {
+        "ar": "انطلاقة الجبيل والغاز والتعليم في الأحساء",
+        "en": "Jubail, natural gas and a university for Al-Ahsa"
+      },
+      "summary": {
+        "ar": "شهد عهد الملك خالد تحوّلًا واسعًا في الصناعة والتعليم بالشرقية. ففي عام 1975 صدر المرسوم الخاص بتطوير الجبيل مدينةً صناعية، ووُضع حجر أساسها عام 1977، وفي العام نفسه افتتح الملك خالد معمل غاز البري، أول منشأة في شبكة الغاز الرئيسة. كما تأسست جامعة الملك فيصل في الأحساء عام 1975.",
+        "en": "King Khalid’s reign brought a broad transformation of industry and education in the Eastern Province. In 1975 a decree set out the development of Jubail as an industrial city, and its foundation stone was laid in 1977. That same year King Khalid opened the Berri gas plant, the first facility in the Master Gas System. King Faisal University was also founded in Al-Ahsa in 1975."
+      },
+      "milestones": [
+        {
+          "year": "1975",
+          "text": {
+            "ar": "مرسوم تطوير الجبيل مدينةً صناعية، وتأسيس جامعة الملك فيصل في الأحساء",
+            "en": "A decree to develop Jubail as an industrial city; King Faisal University is founded in Al-Ahsa"
+          }
+        },
+        {
+          "year": "1977",
+          "text": {
+            "ar": "وضع حجر أساس الجبيل الصناعية وافتتاح معمل غاز البري",
+            "en": "Foundation stone of Jubail Industrial City; the Berri gas plant opens"
+          }
+        }
+      ],
+      "locationIds": [
+        "LOC-007",
+        "LOC-001"
+      ],
+      "sourceIds": [
+        "SRC-031",
+        "SRC-032"
+      ],
+      "imageIds": [
+        "IMG-KING-04"
+      ],
+      "relatedIds": [
+        "HIS-007"
+      ]
+    },
+    {
+      "id": "KING-05",
+      "order": 5,
+      "status": "draft",
+      "name": {
+        "ar": "الملك فهد",
+        "en": "King Fahd"
+      },
+      "reign": {
+        "ar": "1982 - 2005م",
+        "en": "1982 – 2005"
+      },
+      "title": {
+        "ar": "الربط الإقليمي والتوسع المؤسسي والنقل الجوي",
+        "en": "Regional links, new institutions and air travel"
+      },
+      "summary": {
+        "ar": "توسّعت الشرقية في عهد الملك فهد في الربط والنقل والمؤسسات. ففي عام 1986 افتُتح جسر الملك فهد، أول طريق بري مباشر بين المملكة والبحرين، وفي العام نفسه صارت جامعة البترول والمعادن تحمل اسم جامعة الملك فهد للبترول والمعادن. وفي عام 1988 تأسست رسميًا شركة الزيت العربية السعودية «أرامكو السعودية»، ثم افتُتح مطار الملك فهد الدولي في الدمام عام 1999.",
+        "en": "Under King Fahd the Eastern Province grew in transport, connections and institutions. The King Fahd Causeway opened in 1986 as the first direct road link between the Kingdom and Bahrain, and that same year the University of Petroleum and Minerals was renamed King Fahd University of Petroleum and Minerals. The Saudi Arabian Oil Company, Saudi Aramco, was formally established in 1988, and King Fahd International Airport opened in Dammam in 1999."
+      },
+      "milestones": [
+        {
+          "year": "1986",
+          "text": {
+            "ar": "افتتاح جسر الملك فهد بين المملكة والبحرين",
+            "en": "The King Fahd Causeway to Bahrain opens"
+          }
+        },
+        {
+          "year": "1986",
+          "text": {
+            "ar": "تسمية جامعة الملك فهد للبترول والمعادن",
+            "en": "The university becomes King Fahd University of Petroleum and Minerals"
+          }
+        },
+        {
+          "year": "1988",
+          "text": {
+            "ar": "تأسيس شركة أرامكو السعودية رسميًا",
+            "en": "Saudi Aramco is formally established"
+          }
+        },
+        {
+          "year": "1999",
+          "text": {
+            "ar": "افتتاح مطار الملك فهد الدولي في الدمام",
+            "en": "King Fahd International Airport opens in Dammam"
+          }
+        }
+      ],
+      "locationIds": [
+        "LOC-006",
+        "LOC-004",
+        "LOC-005"
+      ],
+      "sourceIds": [
+        "SRC-033",
+        "SRC-028",
+        "SRC-034"
+      ],
+      "imageIds": [
+        "IMG-KING-05"
+      ]
+    },
+    {
+      "id": "KING-06",
+      "order": 6,
+      "status": "draft",
+      "name": {
+        "ar": "الملك عبدالله",
+        "en": "King Abdullah"
+      },
+      "reign": {
+        "ar": "2005 - 2015م",
+        "en": "2005 – 2015"
+      },
+      "title": {
+        "ar": "توسّع الجبيل ومرحلة ثقافية وصناعية جديدة",
+        "en": "Jubail grows and a new cultural and industrial chapter begins"
+      },
+      "summary": {
+        "ar": "تواصل التوسع الصناعي في الشرقية خلال عهد الملك عبدالله؛ فقد انطلقت توسعة الجبيل 2 عام 2005، ووضع الملك عبدالله عام 2008 حجر الأساس لمركز الملك عبدالعزيز الثقافي العالمي «إثراء» في الظهران، قرب بئر الخير. وفي عام 2009 انضمت مدينة رأس الخير للصناعات التعدينية إلى الهيئة الملكية للجبيل وينبع.",
+        "en": "Industrial growth in the Eastern Province continued under King Abdullah. The Jubail 2 expansion was launched in 2005, and in 2008 King Abdullah laid the foundation stone of the King Abdulaziz Center for World Culture (Ithra) in Dhahran, close to the Well of Prosperity. In 2009 Ras Al-Khair Industrial City for mining industries joined the Royal Commission for Jubail and Yanbu."
+      },
+      "milestones": [
+        {
+          "year": "2005",
+          "text": {
+            "ar": "إطلاق توسعة الجبيل 2",
+            "en": "The Jubail 2 expansion is launched"
+          }
+        },
+        {
+          "year": "2008",
+          "text": {
+            "ar": "وضع حجر أساس مركز «إثراء» في الظهران",
+            "en": "Foundation stone of the Ithra centre in Dhahran"
+          }
+        },
+        {
+          "year": "2009",
+          "text": {
+            "ar": "انضمام رأس الخير إلى الهيئة الملكية للجبيل وينبع",
+            "en": "Ras Al-Khair joins the Royal Commission for Jubail and Yanbu"
+          }
+        }
+      ],
+      "locationIds": [
+        "LOC-007",
+        "LOC-004"
+      ],
+      "sourceIds": [
+        "SRC-031",
+        "SRC-035"
+      ],
+      "imageIds": [
+        "IMG-KING-06"
+      ]
+    },
+    {
+      "id": "KING-07",
+      "order": 7,
+      "status": "draft",
+      "name": {
+        "ar": "الملك سلمان",
+        "en": "King Salman"
+      },
+      "reign": {
+        "ar": "2015م - الآن",
+        "en": "2015 – present"
+      },
+      "title": {
+        "ar": "الصناعات المتقدمة والثقافة وتوطين قطاع الطاقة",
+        "en": "Advanced industry, culture and a home-grown energy sector"
+      },
+      "summary": {
+        "ar": "شهد عهد الملك سلمان إطلاق عدد من المشاريع الصناعية والثقافية في الشرقية. ففي عام 2016 دُشّن مركز «إثراء» في الظهران، وافتتح الملك سلمان مشروعي «صدارة» و«ساتورب» في الجبيل، ووضع حجر أساس مجمع الملك سلمان العالمي للصناعات والخدمات البحرية في رأس الخير. وفي عام 2018 وُضع حجر أساس مدينة الملك سلمان للطاقة «سبارك» لدعم صناعات الطاقة وخدماتها وتوطين سلاسل الإمداد.",
+        "en": "King Salman’s reign has seen a series of new industrial and cultural projects in the Eastern Province. In 2016 the Ithra centre opened in Dhahran, King Salman inaugurated the Sadara and SATORP projects in Jubail, and he laid the foundation stone of the King Salman Global Maritime Industries Complex at Ras Al-Khair. In 2018 the foundation stone was laid for King Salman Energy Park (SPARK), which supports energy manufacturing and services and brings supply chains home."
+      },
+      "milestones": [
+        {
+          "year": "2016",
+          "text": {
+            "ar": "تدشين مركز «إثراء» في الظهران",
+            "en": "The Ithra centre opens in Dhahran"
+          }
+        },
+        {
+          "year": "2016",
+          "text": {
+            "ar": "افتتاح «صدارة» و«ساتورب» في الجبيل",
+            "en": "Sadara and SATORP are inaugurated in Jubail"
+          }
+        },
+        {
+          "year": "2016",
+          "text": {
+            "ar": "حجر أساس مجمع الملك سلمان للصناعات البحرية في رأس الخير",
+            "en": "Foundation stone of the King Salman maritime complex at Ras Al-Khair"
+          }
+        },
+        {
+          "year": "2018",
+          "text": {
+            "ar": "حجر أساس مدينة الملك سلمان للطاقة «سبارك»",
+            "en": "Foundation stone of King Salman Energy Park (SPARK)"
+          }
+        }
+      ],
+      "locationIds": [
+        "LOC-004",
+        "LOC-007"
+      ],
+      "sourceIds": [
+        "SRC-035",
+        "SRC-036",
+        "SRC-037",
+        "SRC-038"
+      ],
+      "imageIds": [
+        "IMG-KING-07"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-025",
+      "title": {
+        "ar": "تاريخنا",
+        "en": "Our history"
+      },
+      "publisher": {
+        "ar": "أرامكو السعودية",
+        "en": "Aramco"
+      },
+      "url": "https://www.aramco.com/ar/about-us/our-history",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "بدايات النفط في عهد الملك عبدالعزيز",
+        "en": "The beginnings of oil under King Abdulaziz"
+      }
+    },
+    {
+      "id": "SRC-026",
+      "title": "Exploration",
+      "publisher": "Aramco",
+      "url": "https://www.aramco.com/en/what-we-do/operations/exploration",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "بدء التنقيب عن النفط عام 1933",
+        "en": "The start of oil exploration in 1933"
+      }
+    },
+    {
+      "id": "SRC-027",
+      "title": "Safaniyah: Aramco’s first step offshore",
+      "publisher": "Aramco (Elements magazine)",
+      "url": "https://www.aramco.com/ar/news-media/elements-magazine/2026/safaniyah-aramcos-first-step-offshore",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "بدء الإنتاج من حقل السفانية عام 1957",
+        "en": "Production at Safaniyah in 1957"
+      }
+    },
+    {
+      "id": "SRC-028",
+      "title": "History",
+      "publisher": "King Fahd University of Petroleum and Minerals",
+      "url": "https://kfupm.edu.sa/about-us/our-story/history",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "تأسيس الجامعة وتغيير اسمها",
+        "en": "The founding and renaming of the university"
+      }
+    },
+    {
+      "id": "SRC-029",
+      "title": {
+        "ar": "أسفار الملك سعود ولقاءاته مع الرؤساء",
+        "en": "King Saud’s travels and meetings with heads of state"
+      },
+      "publisher": {
+        "ar": "مؤسسة الملك سعود",
+        "en": "King Saud Foundation"
+      },
+      "url": "https://kingsaud.org/ar/archives/testimonials/%D8%A3%D8%B3%D9%81%D8%A7%D8%B1-%D8%A7%D9%84%D9%85%D9%84%D9%83-%D8%B3%D8%B9%D9%88%D8%AF-%D9%88%D9%84%D9%82%D8%A7%D8%A1%D8%A7%D8%AA%D9%87-%D9%85%D8%B9-%D8%A7%D9%84%D8%B1%D8%A4%D8%B3%D8%A7%D8%A1/",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "افتتاح ميناء الملك عبدالعزيز في الدمام",
+        "en": "The opening of King Abdulaziz Port in Dammam"
+      }
+    },
+    {
+      "id": "SRC-030",
+      "title": "Faisal bin Abdulaziz Al Saud",
+      "publisher": "Saudipedia",
+      "url": "https://saudipedia.com/en/faisal-bin-abdulaziz-al-saud",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "إنجازات عهد الملك فيصل في الشرقية",
+        "en": "King Faisal’s reign in the Eastern Province"
+      }
+    },
+    {
+      "id": "SRC-031",
+      "title": "50 years of history",
+      "publisher": "Royal Commission for Jubail and Yanbu",
+      "url": "https://www.rcjy.gov.sa/50-years-history",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "تطوير الجبيل ورأس الخير",
+        "en": "The development of Jubail and Ras Al-Khair"
+      }
+    },
+    {
+      "id": "SRC-032",
+      "title": "Master Gas System: fueling a nation",
+      "publisher": "Aramco (Elements magazine)",
+      "url": "https://www.aramco.com/en/news-media/elements-magazine/2020/master-gas-system-fueling-a-nation",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "افتتاح معمل غاز البري عام 1977",
+        "en": "The opening of the Berri gas plant in 1977"
+      }
+    },
+    {
+      "id": "SRC-033",
+      "title": {
+        "ar": "من نحن",
+        "en": "About us"
+      },
+      "publisher": {
+        "ar": "المؤسسة العامة لجسر الملك فهد",
+        "en": "King Fahd Causeway Authority"
+      },
+      "url": "https://kfca.sa/ar/aboutus",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "افتتاح جسر الملك فهد عام 1986",
+        "en": "The opening of the King Fahd Causeway in 1986"
+      }
+    },
+    {
+      "id": "SRC-034",
+      "title": "Terms and conditions",
+      "publisher": "Aramco",
+      "url": "https://www.aramco.com/en/terms-and-conditions",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "تأسيس أرامكو السعودية عام 1988",
+        "en": "The founding of Saudi Aramco in 1988"
+      }
+    },
+    {
+      "id": "SRC-035",
+      "title": "The Ithra Story",
+      "publisher": "Ithra",
+      "url": "https://www.ithra.com/application/files/4316/9140/9117/The_Ithra_Story_English.pdf",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "تأسيس مركز «إثراء» وافتتاحه",
+        "en": "How the Ithra centre was founded and opened"
+      }
+    },
+    {
+      "id": "SRC-036",
+      "title": "Jubail inauguration",
+      "publisher": "Aramco",
+      "url": "https://www.aramco.com/en/news-media/news/2016/jubail-inauguration",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "افتتاح «صدارة» و«ساتورب» عام 2016",
+        "en": "The inauguration of Sadara and SATORP in 2016"
+      }
+    },
+    {
+      "id": "SRC-037",
+      "title": "Ras Al-Khair inauguration",
+      "publisher": "Aramco",
+      "url": "https://www.aramco.com/en/news-media/news/2016/rasalkhier-inauguration",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "مجمع الملك سلمان للصناعات البحرية",
+        "en": "The King Salman maritime industries complex"
+      }
+    },
+    {
+      "id": "SRC-038",
+      "title": "SPARK: a new era of growth for Saudi Arabia",
+      "publisher": "Aramco",
+      "url": "https://www.aramco.com/en/news-media/news/2018/spark-new-era-of-growth-for-saudi-arabia",
+      "accessed": "2026-09-29",
+      "usedFor": {
+        "ar": "مدينة الملك سلمان للطاقة «سبارك»",
+        "en": "King Salman Energy Park (SPARK)"
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "IMG-KING-01",
+      "file": "kings/king1.jpg",
+      "alt": {
+        "ar": "صورة رسمية لـالملك عبدالعزيز",
+        "en": "Official portrait of King Abdulaziz"
+      },
+      "sourceUrl": "https://www.mohamadalsaidi.com/?p=7147",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-KING-02",
+      "file": "kings/king2.jpg",
+      "alt": {
+        "ar": "صورة رسمية لـالملك سعود",
+        "en": "Official portrait of King Saud"
+      },
+      "sourceUrl": "https://saudipedia.com/%D8%B3%D8%B9%D9%88%D8%AF-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-KING-03",
+      "file": "kings/king3.jpg",
+      "alt": {
+        "ar": "صورة رسمية لـالملك فيصل",
+        "en": "Official portrait of King Faisal"
+      },
+      "sourceUrl": "https://saudipedia.com/%D9%81%D9%8A%D8%B5%D9%84-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-KING-04",
+      "file": "kings/king4.jpg",
+      "alt": {
+        "ar": "صورة رسمية لـالملك خالد",
+        "en": "Official portrait of King Khalid"
+      },
+      "sourceUrl": "https://saudipedia.com/%D8%AE%D8%A7%D9%84%D8%AF-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-KING-05",
+      "file": "kings/king5.png",
+      "alt": {
+        "ar": "صورة رسمية لـالملك فهد",
+        "en": "Official portrait of King Fahd"
+      },
+      "sourceUrl": "https://mz-mz.net/1683177/",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-KING-06",
+      "file": "kings/king6.jpg",
+      "alt": {
+        "ar": "صورة رسمية لـالملك عبدالله",
+        "en": "Official portrait of King Abdullah"
+      },
+      "sourceUrl": "https://saudipedia.com/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-KING-07",
+      "file": "kings/king7.jpg",
+      "alt": {
+        "ar": "صورة رسمية لـالملك سلمان",
+        "en": "Official portrait of King Salman"
+      },
+      "sourceUrl": "https://saudipedia.com/%D8%B3%D9%84%D9%85%D8%A7%D9%86-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    }
+  ]
+}

@@ -1,8 +1,9 @@
-import { Link, useSearchParams } from 'react-router-dom';
-import { unificationStages, getLocation, routeFor } from '@/data';
+import { useSearchParams } from 'react-router-dom';
+import { unificationStages } from '@/data';
 import { useLang } from '@/i18n/LanguageContext';
 import { PageHeader } from '@/components/ContentCards/PageHeader';
 import { Icon } from '@/components/ContentCards/Icon';
+import { MapLinks } from '@/components/ContentCards/MapLinks';
 import { MediaFrame } from '@/components/ContentCards/MediaFrame';
 import { SourceList } from '@/components/ContentCards/SourceList';
 import { StatusBadge } from '@/components/ContentCards/StatusBadge';
@@ -79,17 +80,7 @@ export default function Unification() {
           </div>
           <h2 id={`${stage.id}-h`}>{L(stage.title)}</h2>
           <Text value={stage.summary} />
-          {stage.locationIds.length > 0 && (
-            <div className="map-links">
-              {stage.locationIds.map((id) => {
-                const loc = getLocation(id);
-                const to = routeFor(id);
-                return loc && to ? (
-                  <Link key={id} to={to} state={backState} className="btn btn-secondary"><Icon name="pin" size={18} /> {t('viewOnMap')}: {L(loc.name)}</Link>
-                ) : null;
-              })}
-            </div>
-          )}
+          <MapLinks ids={stage.locationIds} back={backState} />
           <SourceList ids={stage.sourceIds} />
         </div>
       </article>

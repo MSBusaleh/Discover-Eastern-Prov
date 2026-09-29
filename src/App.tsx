@@ -13,7 +13,7 @@ import Explore from '@/pages/Explore';
 // Map pages load eagerly (they're the core). Other sections are split out.
 const Timeline = lazy(() => import('@/pages/Timeline'));
 const Unification = lazy(() => import('@/pages/Unification'));
-const RoyalVisits = lazy(() => import('@/pages/RoyalVisits'));
+const Kings = lazy(() => import('@/pages/Kings'));
 const Sources = lazy(() => import('@/pages/Sources'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
@@ -42,7 +42,7 @@ function Shell() {
             <Route path="/explore" element={<Explore />} />
             <Route path="/timeline" element={<Timeline />} />
             <Route path="/unification" element={<Unification />} />
-            <Route path="/royal-visits" element={<RoyalVisits />} />
+            <Route path="/kings" element={<Kings />} />
             <Route path="/sources" element={<Sources />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

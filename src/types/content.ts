@@ -115,23 +115,26 @@ export interface UnificationStage extends BaseItem {
 }
 
 /* ------------------------------------------------------------------ */
-/* Royal visits                                                         */
+/* Kings: the Eastern Province reign by reign                            */
 /* ------------------------------------------------------------------ */
 
-export interface King {
-  id: string;
-  name: LocalizedText;
-  /** Reign order, used for sorting. */
-  order: number;
+export interface Milestone {
+  /** Shown as written, e.g. "1938" or "1973 - 1974". */
+  year: string;
+  text: LocalizedText;
 }
 
-export interface RoyalVisit extends BaseItem {
-  kingId: string;
-  dateLabel: LocalizedText;
-  sortYear: number | null;
-  locationIds: string[];
-  occasion: LocalizedText;
+export interface KingReign extends BaseItem {
+  /** Reign order, used for sorting. */
+  order: number;
+  name: LocalizedText;
+  /** Reign years, e.g. "1932 – 1953". */
+  reign: LocalizedText;
+  /** One-line theme of the reign in the region. */
+  title: LocalizedText;
   summary: LocalizedText;
+  milestones: Milestone[];
+  locationIds: string[];
   relatedIds?: string[];
 }
 
@@ -200,8 +203,9 @@ export interface ContemporaryTopic extends BaseItem {
 
 export interface Source {
   id: string;
-  title: string;
-  publisher: string;
+  /** A plain string when the title only exists in one language. */
+  title: string | LocalizedText;
+  publisher: string | LocalizedText;
   url?: string;
   /** ISO date the source was consulted. */
   accessed: string;
@@ -233,6 +237,6 @@ export type AnyItem =
   | { type: 'location'; item: Location }
   | { type: 'event'; item: HistoricalEvent }
   | { type: 'stage'; item: UnificationStage }
-  | { type: 'visit'; item: RoyalVisit }
+  | { type: 'reign'; item: KingReign }
   | { type: 'person'; item: Personality }
   | { type: 'topic'; item: ContemporaryTopic };

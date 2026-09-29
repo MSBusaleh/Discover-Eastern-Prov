@@ -6,5 +6,5 @@ export const sections: { path: string; icon: IconName; label: StringKey; short: 
   { path: '/explore', icon: 'map', label: 'navExplore', short: 'shortExplore' },
   { path: '/timeline', icon: 'clock', label: 'navTimeline', short: 'shortTimeline', blurb: 'blurbTimeline' },
   { path: '/unification', icon: 'flag', label: 'navUnification', short: 'shortUnification', blurb: 'blurbUnification' },
-  { path: '/royal-visits', icon: 'crown', label: 'navRoyal', short: 'shortRoyal', blurb: 'blurbRoyal' },
+  { path: '/kings', icon: 'crown', label: 'navRoyal', short: 'shortRoyal', blurb: 'blurbRoyal' },
 ];

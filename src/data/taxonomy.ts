@@ -28,7 +28,7 @@ export const themeLabels: Record<MapTheme, LocalizedText> = {
   nature: { ar: 'الطبيعة والسياحة', en: 'Nature & Tourism' },
   energy: { ar: 'الطاقة والصناعة', en: 'Energy & Industry' },
   people: { ar: 'شخصيات', en: 'Historical Figures' },
-  royal: { ar: 'التاريخ السعودي والزيارات الملكية', en: 'Saudi History & Royal Visits' },
+  royal: { ar: 'التاريخ السعودي وعهود الملوك', en: 'Saudi History & the Kings' },
 };
 
 export const eraOrder: EraId[] = ['ancient', 'classical', 'islamic', 'maritime', 'unification', 'oil', 'modern'];

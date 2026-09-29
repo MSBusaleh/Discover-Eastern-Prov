@@ -7,16 +7,16 @@
 import { locations } from '../src/data/locations';
 import { historicalEvents } from '../src/data/historical-events';
 import { unificationStages } from '../src/data/unification';
-import { kings, royalVisits } from '../src/data/royal-visits';
+import { kingReigns } from '../src/data/kings';
 import { personalities } from '../src/data/personalities';
 import { contemporaryTopics } from '../src/data/contemporary-topics';
 import { sources } from '../src/data/sources';
 import { media } from '../src/data/media';
 
 const errors: string[] = [];
-const all = [...locations, ...historicalEvents, ...unificationStages, ...royalVisits, ...personalities, ...contemporaryTopics];
+const all = [...locations, ...historicalEvents, ...unificationStages, ...kingReigns, ...personalities, ...contemporaryTopics];
 const ids = new Set<string>();
-for (const x of [...all, ...kings, ...sources, ...media]) {
+for (const x of [...all, ...sources, ...media]) {
   if (ids.has(x.id)) errors.push(`Duplicate ID ${x.id}`);
   ids.add(x.id);
 }
@@ -36,7 +36,6 @@ for (const l of locations) {
   if (l.parentId && !locations.some((p) => p.id === l.parentId)) errors.push(`${l.id} → unknown parent ${l.parentId}`);
   if (l.coordinates && !sourceIds.has(l.coordinates.sourceId)) errors.push(`${l.id} coordinates have no valid sourceId`);
 }
-for (const v of royalVisits) if (!kings.some((k) => k.id === v.kingId)) errors.push(`${v.id} → unknown king ${v.kingId}`);
 
 const byStatus = { demo: 0, draft: 0, approved: 0 };
 for (const x of all) byStatus[x.status]++;

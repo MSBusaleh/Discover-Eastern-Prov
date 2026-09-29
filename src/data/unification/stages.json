@@ -132,32 +132,50 @@
   "sources": [
     {
       "id": "SRC-015",
-      "title": "تاريخ المملكة العربية السعودية — History of the Kingdom of Saudi Arabia",
-      "publisher": "د. عبدالله الصالح العثيمين — Dr. Abdullah Al-Saleh Al-Uthaymeen",
+      "title": {
+        "ar": "تاريخ المملكة العربية السعودية",
+        "en": "History of the Kingdom of Saudi Arabia"
+      },
+      "publisher": {
+        "ar": "د. عبدالله الصالح العثيمين",
+        "en": "Dr. Abdullah Al-Saleh Al-Uthaymeen"
+      },
       "accessed": "2026-09-28",
       "usedFor": {
         "ar": "مراحل توحيد المنطقة الشرقية",
-        "en": "Stages of the unification of the Eastern Province"
+        "en": "How the Eastern Province was unified"
       }
     },
     {
       "id": "SRC-016",
-      "title": "شبه الجزيرة في عهد الملك عبدالعزيز — The Peninsula in the Reign of King Abdulaziz",
-      "publisher": "خير الدين الزركلي — Khair al-Din al-Zirikli",
+      "title": {
+        "ar": "شبه الجزيرة في عهد الملك عبدالعزيز",
+        "en": "The Peninsula in the Reign of King Abdulaziz"
+      },
+      "publisher": {
+        "ar": "خير الدين الزركلي",
+        "en": "Khair al-Din al-Zirikli"
+      },
       "accessed": "2026-09-28",
       "usedFor": {
         "ar": "مراحل توحيد المنطقة الشرقية",
-        "en": "Stages of the unification of the Eastern Province"
+        "en": "How the Eastern Province was unified"
       }
     },
     {
       "id": "SRC-017",
-      "title": "إصدارات تاريخ توحيد البلاد ومعاهدات الحدود — Publications on the unification and border treaties",
-      "publisher": "دارة الملك عبدالعزيز — King Abdulaziz Foundation for Research and Archives (Darah)",
+      "title": {
+        "ar": "إصدارات عن توحيد المملكة ومعاهدات الحدود",
+        "en": "Publications on the unification and the border treaties"
+      },
+      "publisher": {
+        "ar": "دارة الملك عبدالعزيز",
+        "en": "King Abdulaziz Foundation for Research and Archives (Darah)"
+      },
       "accessed": "2026-09-28",
       "usedFor": {
-        "ar": "توحيد البلاد ومعاهدات الحدود",
-        "en": "The unification and border treaties"
+        "ar": "توحيد المملكة ومعاهدات الحدود",
+        "en": "The unification and the border treaties"
       }
     }
   ],

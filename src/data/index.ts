@@ -12,17 +12,17 @@
 import { siteConfig } from '@/config/site';
 import type {
   AnyItem, ContemporaryTopic, HistoricalEvent, Location, MapTheme, Personality,
-  RoyalVisit, UnificationStage, ContentStatus,
+  KingReign, UnificationStage, ContentStatus,
 } from '@/types/content';
 import { locations as allLocations } from './locations';
 import { historicalEvents as allEvents } from './historical-events';
 import { unificationStages as allStages } from './unification';
-import { kings, royalVisits as allVisits } from './royal-visits';
+import { kingReigns as allReigns } from './kings';
 import { personalities as allPeople } from './personalities';
 import { contemporaryTopics as allTopics, topicCategories } from './contemporary-topics';
 import { eraOrder } from './taxonomy';
 
-export { kings, topicCategories };
+export { topicCategories };
 export { sources, sourceById } from './sources';
 export { media, mediaById, isDisplayable } from './media';
 
@@ -31,7 +31,7 @@ const visible = <T extends { status: ContentStatus }>(xs: T[]) =>
 
 export const locations: Location[] = visible(allLocations);
 export const unificationStages: UnificationStage[] = visible(allStages).sort((a, b) => a.order - b.order);
-export const royalVisits: RoyalVisit[] = visible(allVisits);
+export const kingReigns: KingReign[] = visible(allReigns).sort((a, b) => a.order - b.order);
 export const personalities: Personality[] = visible(allPeople);
 export const contemporaryTopics: ContemporaryTopic[] = visible(allTopics);
 export const historicalEvents: HistoricalEvent[] = visible(allEvents).sort((a, b) => {
@@ -47,7 +47,7 @@ const index = new Map<string, AnyItem>();
 locations.forEach((item) => index.set(item.id, { type: 'location', item }));
 historicalEvents.forEach((item) => index.set(item.id, { type: 'event', item }));
 unificationStages.forEach((item) => index.set(item.id, { type: 'stage', item }));
-royalVisits.forEach((item) => index.set(item.id, { type: 'visit', item }));
+kingReigns.forEach((item) => index.set(item.id, { type: 'reign', item }));
 personalities.forEach((item) => index.set(item.id, { type: 'person', item }));
 contemporaryTopics.forEach((item) => index.set(item.id, { type: 'topic', item }));
 
@@ -55,7 +55,6 @@ export function getItem(id: string): AnyItem | undefined {
   return index.get(id);
 }
 export const getLocation = (id: string) => locations.find((l) => l.id === id);
-export const getKing = (id: string) => kings.find((k) => k.id === id);
 
 /** Route that displays an item. Unknown IDs return null (link is hidden). */
 export function routeFor(id: string): string | null {
@@ -65,7 +64,7 @@ export function routeFor(id: string): string | null {
     case 'location': return `/explore?loc=${id}`;
     case 'event': return `/timeline?event=${id}`;
     case 'stage': return `/unification?stage=${id}`;
-    case 'visit': return `/royal-visits?visit=${id}`;
+    case 'reign': return `/kings?king=${id}`;
     case 'person': return null; // the People section is not published
     case 'topic': return null; // the Today & Tomorrow section is not published
   }
@@ -76,10 +75,7 @@ export function titleOf(hit: AnyItem) {
   switch (hit.type) {
     case 'location': return hit.item.name;
     case 'person': return hit.item.name;
-    case 'visit': {
-      const k = getKing(hit.item.kingId);
-      return k ? k.name : { ar: hit.item.id, en: hit.item.id };
-    }
+    case 'reign': return hit.item.name;
     default: return hit.item.title;
   }
 }
@@ -119,6 +115,6 @@ export const childrenOf = (id: string) => locations.filter((l) => l.parentId ===
 export function themesOf(loc: Location): MapTheme[] {
   const themes = new Set(loc.themes);
   const rel = relatedTo(loc.id);
-  if (rel.some((r) => r.type === 'visit' || r.type === 'stage')) themes.add('royal');
+  if (rel.some((r) => r.type === 'reign' || r.type === 'stage')) themes.add('royal');
   return [...themes];
 }

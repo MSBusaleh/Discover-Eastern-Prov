@@ -1,6 +1,7 @@
 import type { Source } from '@/types/content';
 import { unificationSources } from '../unification';
 import { timelineSources } from '../historical-events';
+import { kingSources } from '../kings';
 
 /**
  * Source registry. Every factual item points here by ID.
@@ -11,8 +12,8 @@ import { timelineSources } from '../historical-events';
  * official or primary source.
  */
 const used = {
-  coords: { ar: 'إحداثيات الموقع على الخريطة', en: 'Map marker coordinates' },
-  coordsFacts: { ar: 'الإحداثيات ومعلومات مختصرة', en: 'Coordinates and short facts' },
+  coords: { ar: 'موقع العلامة على الخريطة', en: 'Where the map marker goes' },
+  coordsFacts: { ar: 'موقع العلامة على الخريطة ومعلومات مختصرة', en: 'Map marker and a few short facts' },
 };
 
 export const sources: Source[] = [
@@ -27,11 +28,12 @@ export const sources: Source[] = [
   { id: 'SRC-009', title: 'Thāj', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Th%C4%81j', accessed: '2026-09-25', usedFor: used.coords, replaceBeforeLaunch: true },
   { id: 'SRC-010', title: 'Uqair', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Uqair', accessed: '2026-09-25', usedFor: used.coords, replaceBeforeLaunch: true },
   { id: 'SRC-011', title: 'Ibrahim Palace — heritage inventory record', publisher: 'IRCICA Islamic Architectural Heritage', url: 'https://www.islamicarchitecturalheritage.com/listings/ibrahim-palace', accessed: '2026-09-25', usedFor: used.coords, replaceBeforeLaunch: true },
-  { id: 'SRC-012', title: 'Qasr Ibrahim', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Qasr_Ibrahim', accessed: '2026-09-25', usedFor: { ar: 'تأكيد موقع قصر إبراهيم', en: 'Cross-check of Ibrahim Palace location' }, replaceBeforeLaunch: true },
-  { id: 'SRC-013', title: 'Thāj (Q1528269)', publisher: 'Wikidata', url: 'https://www.wikidata.org/wiki/Q1528269', accessed: '2026-09-25', usedFor: { ar: 'مقارنة إحداثيات ثاج (يوجد اختلاف)', en: 'Thaj coordinate cross-check (values differ)' }, replaceBeforeLaunch: true },
-  { id: 'SRC-014', title: '1:10m Admin 0 countries and Admin 1 states/provinces', publisher: 'Natural Earth', url: 'https://www.naturalearthdata.com/', accessed: '2026-09-27', usedFor: { ar: 'خريطة الأساس وحدود المنطقة الشرقية', en: 'Basemap and Eastern Province outline' } },
+  { id: 'SRC-012', title: 'Qasr Ibrahim', publisher: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Qasr_Ibrahim', accessed: '2026-09-25', usedFor: { ar: 'التحقق من موقع قصر إبراهيم', en: 'Double-checking where Ibrahim Palace is' }, replaceBeforeLaunch: true },
+  { id: 'SRC-013', title: 'Thāj (Q1528269)', publisher: 'Wikidata', url: 'https://www.wikidata.org/wiki/Q1528269', accessed: '2026-09-25', usedFor: { ar: 'مقارنة موقع ثاج (القيم مختلفة)', en: 'Comparing Thaj’s position (the values differ)' }, replaceBeforeLaunch: true },
+  { id: 'SRC-014', title: '1:10m Admin 0 countries and Admin 1 states/provinces', publisher: 'Natural Earth', url: 'https://www.naturalearthdata.com/', accessed: '2026-09-27', usedFor: { ar: 'خريطة الأساس وحدود المنطقة الشرقية', en: 'The base map and the outline of the Eastern Province' } },
   ...unificationSources,
   ...timelineSources,
+  ...kingSources,
 ];
 
 export const sourceById = new Map(sources.map((s) => [s.id, s]));
