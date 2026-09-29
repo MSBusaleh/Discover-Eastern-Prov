@@ -8,14 +8,12 @@ import { locations } from '../src/data/locations';
 import { historicalEvents } from '../src/data/historical-events';
 import { unificationStages } from '../src/data/unification';
 import { kingReigns } from '../src/data/kings';
-import { personalities } from '../src/data/personalities';
-import { contemporaryTopics } from '../src/data/contemporary-topics';
 import { sources } from '../src/data/sources';
 import { media } from '../src/data/media';
 import photos from '../src/data/media/photos.json';
 
 const errors: string[] = [];
-const all = [...locations, ...historicalEvents, ...unificationStages, ...kingReigns, ...personalities, ...contemporaryTopics];
+const all = [...locations, ...historicalEvents, ...unificationStages, ...kingReigns];
 const ids = new Set<string>();
 for (const x of [...all, ...sources, ...media]) {
   if (ids.has(x.id)) errors.push(`Duplicate ID ${x.id}`);
@@ -27,7 +25,7 @@ const contentIds = new Set(all.map((x) => x.id));
 
 for (const x of all as unknown as Record<string, unknown>[]) {
   const id = x.id as string;
-  for (const key of ['locationIds', 'personIds', 'eventIds', 'relatedIds']) {
+  for (const key of ['locationIds', 'eventIds', 'relatedIds']) {
     for (const ref of (x[key] as string[] | undefined) ?? []) if (!contentIds.has(ref)) errors.push(`${id}.${key} → unknown ${ref}`);
   }
   for (const s of (x.sourceIds as string[]) ?? []) if (!sourceIds.has(s)) errors.push(`${id} → unknown source ${s}`);

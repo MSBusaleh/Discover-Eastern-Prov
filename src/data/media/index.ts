@@ -1,7 +1,8 @@
-import type { MediaAsset } from '@/types/content';
+import type { LocalizedText, MediaAsset } from '@/types/content';
 import { unificationImages } from '../unification';
 import { timelineImages } from '../historical-events';
 import { kingImages } from '../kings';
+import { locationImages } from '../locations';
 
 /**
  * Image registry (brief §15.4). The prototype ships NO external photographs.
@@ -28,12 +29,14 @@ export const media: MediaAsset[] = [
   ...unificationImages,
   ...timelineImages,
   ...kingImages,
+  ...locationImages,
 ];
 
 export const mediaById = new Map(media.map((m) => [m.id, m]));
 
-/** Short credit line for an image: its attribution, or the website it came from. */
-export function creditOf(m: MediaAsset): string | null {
+/** How an image's source is named: its credit, its attribution, or the website it came from. */
+export function creditOf(m: MediaAsset): LocalizedText | string | null {
+  if (m.credit) return m.credit;
   if (m.attribution) return m.attribution;
   if (m.sourceUrl) return new URL(m.sourceUrl).hostname.replace(/^www\./, '');
   return null;

@@ -1,61 +1,57 @@
 /**
- * Photo pipeline: run `npm run images` (it also runs before every build).
+ * Photo pipeline: run `npm run images` (it also runs before dev and every build).
  *
- * Reads the original photos in images/<section>/… and writes, for each one:
- *   - src/assets/photos/<section>/<name>.webp — resized (max 1200 px) and compressed
- *   - an entry in src/data/media/photos.json with its size and a tiny blurred
- *     preview (a data URI) that is shown while the real photo loads.
+ * All photos live in src/assets/photos/<section>/…. For each one it:
+ *   - converts it to WebP (max 1200 px on its longest side) if it isn't already
+ *     a WebP within that size, replacing the original file in place;
+ *   - records its size and a tiny blurred preview in src/data/media/photos.json,
+ *     which the site shows while the real photo loads.
  *
- * Content files keep referring to the original name (e.g. "kings/king1.jpg").
- * Unchanged photos are skipped, so re-running is fast.
+ * To add a photo: drop the file (JPG, PNG, WebP…) into the right folder, run
+ * `npm run images`, and refer to the resulting .webp name in the content files.
  */
-import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, statSync, unlinkSync, writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { dirname, extname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SRC = join(root, 'images');
-const OUT = join(root, 'src/assets/photos');
+const DIR = join(root, 'src/assets/photos');
 const MANIFEST = join(root, 'src/data/media/photos.json');
 const MAX = 1200;
-const EXT = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif']);
+const EXT = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.tif', '.tiff']);
 
 const walk = (dir) => readdirSync(dir).flatMap((name) => {
   const p = join(dir, name);
   return statSync(p).isDirectory() ? walk(p) : EXT.has(extname(name).toLowerCase()) ? [p] : [];
 });
 
-const old = existsSync(MANIFEST) ? JSON.parse(readFileSync(MANIFEST, 'utf8')) : {};
+mkdirSync(DIR, { recursive: true });
 const manifest = {};
-let made = 0;
+let converted = 0;
 
-for (const file of walk(SRC)) {
-  const key = relative(SRC, file).split('\\').join('/');            // "kings/king1.jpg"
-  const webp = key.replace(/\.[^.]+$/, '.webp');                    // "kings/king1.webp"
-  const out = join(OUT, webp);
-
-  if (old[key] && existsSync(out) && statSync(out).mtimeMs >= statSync(file).mtimeMs) {
-    manifest[key] = old[key];
-    continue;
+for (let file of walk(DIR).sort()) {
+  const meta = await sharp(file).metadata();
+  const isWebp = extname(file).toLowerCase() === '.webp';
+  if (!isWebp || Math.max(meta.width ?? 0, meta.height ?? 0) > MAX) {
+    const out = file.replace(/\.[^.]+$/, '.webp');
+    const buffer = await sharp(file).rotate()
+      .resize({ width: MAX, height: MAX, fit: 'inside', withoutEnlargement: true })
+      .webp({ quality: 75 })
+      .toBuffer();
+    if (out !== file) unlinkSync(file);
+    writeFileSync(out, buffer);
+    console.log(`  optimised ${relative(DIR, file)} → ${relative(DIR, out)} (${(buffer.length / 1024).toFixed(0)} KB)`);
+    file = out;
+    converted++;
   }
 
-  mkdirSync(dirname(out), { recursive: true });
-  const info = await sharp(file).rotate()
-    .resize({ width: MAX, height: MAX, fit: 'inside', withoutEnlargement: true })
-    .webp({ quality: 75 })
-    .toFile(out);
-  const tiny = await sharp(file).rotate().resize({ width: 24, height: 24, fit: 'inside' }).webp({ quality: 40 }).toBuffer();
-
-  manifest[key] = {
-    src: webp,
-    width: info.width,
-    height: info.height,
-    blur: `data:image/webp;base64,${tiny.toString('base64')}`,
-  };
-  made++;
-  console.log(`  ${key} → ${webp}  ${(statSync(file).size / 1024).toFixed(0)} KB → ${(info.size / 1024).toFixed(0)} KB`);
+  const { width, height } = await sharp(file).metadata();
+  const tiny = await sharp(file).resize({ width: 24, height: 24, fit: 'inside' }).webp({ quality: 40 }).toBuffer();
+  const key = relative(DIR, file).split('\\').join('/');            // "kings/king1.webp"
+  manifest[key] = { width, height, blur: `data:image/webp;base64,${tiny.toString('base64')}` };
 }
 
-writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + '\n');
-console.log(`Photos: ${Object.keys(manifest).length} (${made} updated)`);
+const json = JSON.stringify(manifest, null, 2) + '\n';
+if (!existsSync(MANIFEST) || readFileSync(MANIFEST, 'utf8') !== json) writeFileSync(MANIFEST, json);
+console.log(`Photos: ${Object.keys(manifest).length}${converted ? ` (${converted} optimised)` : ''}`);

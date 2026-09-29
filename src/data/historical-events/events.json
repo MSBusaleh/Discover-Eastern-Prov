@@ -20,7 +20,6 @@
       "locationIds": [
         "LOC-003"
       ],
-      "personIds": [],
       "sourceIds": [
         "SRC-018"
       ],
@@ -48,7 +47,6 @@
       "locationIds": [
         "LOC-009"
       ],
-      "personIds": [],
       "sourceIds": [
         "SRC-019"
       ],
@@ -76,7 +74,6 @@
       "locationIds": [
         "LOC-001"
       ],
-      "personIds": [],
       "sourceIds": [
         "SRC-020"
       ],
@@ -105,7 +102,6 @@
         "LOC-001",
         "LOC-002"
       ],
-      "personIds": [],
       "sourceIds": [
         "SRC-021"
       ],
@@ -136,7 +132,6 @@
       "locationIds": [
         "LOC-004"
       ],
-      "personIds": [],
       "sourceIds": [
         "SRC-022"
       ],
@@ -167,7 +162,6 @@
       "locationIds": [
         "LOC-007"
       ],
-      "personIds": [],
       "sourceIds": [
         "SRC-023"
       ],
@@ -195,7 +189,6 @@
       "locationIds": [
         "LOC-001"
       ],
-      "personIds": [],
       "sourceIds": [
         "SRC-024"
       ],
@@ -295,51 +288,67 @@
   "images": [
     {
       "id": "IMG-HIS-01",
-      "file": "timeline/timeline1.jpg",
+      "file": "timeline/timeline1.webp",
       "alt": {
         "ar": "صورة جوية لقلعة تاروت بأبراجها الدائرية وسط البلدة",
         "en": "Aerial view of Tarout Castle and its round towers in the town"
       },
       "sourceUrl": "https://www.qpedia.org/ar/topics/11346/%D9%82%D9%84%D8%B9%D8%A9-%D8%AA%D8%A7%D8%B1%D9%88%D8%AA-%D9%85%D9%86-%D8%A3%D9%82%D8%AF%D9%85-%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%8A%D8%B7%D8%A7%D9%86-%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D9%8A",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "موسوعة كيوبيديا",
+        "en": "Qpedia"
+      }
     },
     {
       "id": "IMG-HIS-02",
-      "file": "timeline/timeline2.jpg",
+      "file": "timeline/timeline2.webp",
       "alt": {
         "ar": "فريق تنقيب أثري يعمل بين أساسات مبانٍ قديمة في ثاج",
         "en": "An archaeological team excavating ancient building foundations at Thaj"
       },
       "sourceUrl": "https://saudipedia.com/en/thaj-historical-city",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     },
     {
       "id": "IMG-HIS-03",
-      "file": "timeline/timeline3.jpg",
+      "file": "timeline/timeline3.webp",
       "alt": {
         "ar": "مسجد جواثا بجدرانه الطينية الفاتحة وبرجه المسنن",
         "en": "Jawatha Mosque with its pale earthen walls and crenellated tower"
       },
       "sourceUrl": "https://saudipedia.com/en/jawatha-archaeological-site",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     },
     {
       "id": "IMG-HIS-04",
-      "file": "timeline/timeline4.jpg",
+      "file": "timeline/timeline4.webp",
       "alt": {
         "ar": "صورة تاريخية لقافلة من راكبي الجمال يحملون الرايات في الصحراء",
         "en": "Historical photo of a camel-mounted column carrying banners across the desert"
       },
       "sourceUrl": "https://saudipedia.com/en/unification-of-saudi-arabia",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     },
     {
       "id": "IMG-HIS-05",
-      "file": "timeline/timeline5.jpg",
+      "file": "timeline/timeline5.webp",
       "alt": {
         "ar": "بئر الدمام رقم 7 قديمًا بأبراج الحفر، وموقعه اليوم محاطًا بساحة مرصوفة",
         "en": "Dammam Well No. 7 then, with its drilling derricks, and its site today set in a paved plaza"
@@ -350,25 +359,33 @@
     },
     {
       "id": "IMG-HIS-06",
-      "file": "timeline/timeline6.jpg",
+      "file": "timeline/timeline6.webp",
       "alt": {
         "ar": "صورة جوية للواجهة البحرية في مدينة الجبيل الصناعية",
         "en": "Aerial view of the waterfront of Jubail Industrial City"
       },
       "sourceUrl": "https://saudipedia.com/%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A7%D9%84%D8%AC%D8%A8%D9%8A%D9%84-%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     },
     {
       "id": "IMG-HIS-07",
-      "file": "timeline/timeline7.jpg",
+      "file": "timeline/timeline7.webp",
       "alt": {
         "ar": "صورة جوية لطريق ترابي بين بساتين النخيل في واحة الأحساء",
         "en": "Aerial view of a dirt track between palm groves in Al-Ahsa Oasis"
       },
       "sourceUrl": "https://saudipedia.com/%D9%88%D8%A7%D8%AD%D8%A9-%D8%A7%D9%84%D8%A3%D8%AD%D8%B3%D8%A7%D8%A1",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     }
   ]
 }

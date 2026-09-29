@@ -58,7 +58,7 @@ export function MediaFrame({
             {credit && (
               <span className="media-credit">
                 {t('imageSource')}:{' '}
-                {img.sourceUrl ? <a href={img.sourceUrl} target="_blank" rel="noopener noreferrer">{credit}</a> : credit}
+                {img.sourceUrl ? <a href={img.sourceUrl} target="_blank" rel="noopener noreferrer">{L(credit)}</a> : L(credit)}
               </span>
             )}
           </figcaption>

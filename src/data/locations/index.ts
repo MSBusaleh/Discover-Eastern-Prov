@@ -1,4 +1,8 @@
-import type { Location } from '@/types/content';
+import type { Location, MediaAsset } from '@/types/content';
+import photoData from './images.json';
+
+/** Place photos, with their credits (merged into the image registry). */
+export const locationImages = photoData.images as MediaAsset[];
 
 /**
  * LOCATIONS
@@ -34,7 +38,7 @@ export const locations: Location[] = [
       en: 'A governorate built around the Al-Ahsa Oasis, with Al-Hofuf as its main city.',
     },
     sourceIds: ['SRC-001'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-01'],
   },
   {
     id: 'LOC-011',
@@ -50,7 +54,7 @@ export const locations: Location[] = [
       en: 'A historic fort in Al-Hofuf dating from the Ottoman period.',
     },
     sourceIds: ['SRC-011', 'SRC-012'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-02'],
   },
   {
     id: 'LOC-010',
@@ -66,7 +70,7 @@ export const locations: Location[] = [
       en: 'A historic seaport on the Arabian Gulf coast, within Al-Ahsa Governorate.',
     },
     sourceIds: ['SRC-010'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-03'],
   },
   {
     id: 'LOC-002',
@@ -80,7 +84,7 @@ export const locations: Location[] = [
       en: 'A coastal governorate that includes Qatif City, Safwa, Saihat and Tarout Island.',
     },
     sourceIds: ['SRC-002'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-04'],
   },
   {
     id: 'LOC-003',
@@ -95,7 +99,7 @@ export const locations: Location[] = [
       en: 'An island in the Arabian Gulf within Qatif Governorate, linked to the mainland by causeways.',
     },
     sourceIds: ['SRC-003'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-05'],
   },
   {
     id: 'LOC-005',
@@ -109,7 +113,7 @@ export const locations: Location[] = [
       en: 'The capital and largest city of the Eastern Province, and a port on the Arabian Gulf.',
     },
     sourceIds: ['SRC-005'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-06'],
   },
   {
     id: 'LOC-004',
@@ -123,7 +127,7 @@ export const locations: Location[] = [
       en: 'Home to Saudi Aramco’s headquarters and King Fahd University of Petroleum and Minerals.',
     },
     sourceIds: ['SRC-004'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-07'],
   },
   {
     id: 'LOC-006',
@@ -137,7 +141,7 @@ export const locations: Location[] = [
       en: 'A coastal city and the starting point of the King Fahd Causeway to Bahrain.',
     },
     sourceIds: ['SRC-006'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-08'],
   },
   {
     id: 'LOC-007',
@@ -151,7 +155,7 @@ export const locations: Location[] = [
       en: 'An industrial city on the Gulf coast, chosen in 1975 as the site of Jubail Industrial City.',
     },
     sourceIds: ['SRC-007'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-09'],
   },
   {
     id: 'LOC-008',
@@ -165,7 +169,7 @@ export const locations: Location[] = [
       en: 'A governorate on the Ras Tanura peninsula with an oil refinery and marine export terminal.',
     },
     sourceIds: ['SRC-008'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-10'],
   },
   {
     id: 'LOC-009',
@@ -189,6 +193,6 @@ export const locations: Location[] = [
       en: 'An archaeological site and ancient town west of Jubail, associated with the Hellenistic era.',
     },
     sourceIds: ['SRC-009', 'SRC-013'],
-    imageIds: [],
+    imageIds: ['IMG-LOC-11'],
   },
 ];

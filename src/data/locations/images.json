@@ -1,0 +1,213 @@
+{
+  "images": [
+    {
+      "id": "IMG-LOC-01",
+      "file": "map/al-ahsa.webp",
+      "alt": {
+        "ar": "بساتين النخيل في واحة الأحساء",
+        "en": "Palm groves in the Al-Ahsa Oasis"
+      },
+      "caption": {
+        "ar": "بساتين النخيل في واحة الأحساء",
+        "en": "Palm groves in the Al-Ahsa Oasis"
+      },
+      "sourceUrl": "https://whc.unesco.org/include/tool_image_bootstrap.cfm?id=182369",
+      "credit": {
+        "ar": "مركز التراث العالمي، اليونسكو",
+        "en": "UNESCO World Heritage Centre"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-02",
+      "file": "map/ibrahim-palace.webp",
+      "alt": {
+        "ar": "قصر إبراهيم في الهفوف",
+        "en": "Ibrahim Palace in Al-Hofuf"
+      },
+      "caption": {
+        "ar": "قصر إبراهيم في الهفوف",
+        "en": "Ibrahim Palace in Al-Hofuf"
+      },
+      "sourceUrl": "https://ar.wikipedia.org/wiki/%D9%85%D9%84%D9%81:%D9%82%D8%B5%D8%B1_%D8%A7%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85.jpg",
+      "credit": {
+        "ar": "ويكيبيديا العربية",
+        "en": "Arabic Wikipedia"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-03",
+      "file": "map/uqair.webp",
+      "alt": {
+        "ar": "المباني التاريخية في ميناء العقير",
+        "en": "Historic buildings at Al-Uqair port"
+      },
+      "caption": {
+        "ar": "المباني التاريخية في ميناء العقير",
+        "en": "Historic buildings at Al-Uqair port"
+      },
+      "sourceUrl": "https://www.spa.gov.sa/w575074",
+      "credit": {
+        "ar": "وكالة الأنباء السعودية (واس)",
+        "en": "Saudi Press Agency (SPA)"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-04",
+      "file": "map/qatif.webp",
+      "alt": {
+        "ar": "منظر جوي لمدينة القطيف",
+        "en": "An aerial view of Qatif"
+      },
+      "caption": {
+        "ar": "منظر جوي لمدينة القطيف",
+        "en": "An aerial view of Qatif"
+      },
+      "sourceUrl": "https://www.instagram.com/p/DYmuSHvClH1/",
+      "credit": {
+        "ar": "تصوير محمد أبو سرير، عبر حساب «جهات نيوز» على إنستغرام",
+        "en": "Photo by Mohammed Abo Sareer, via Jehat News on Instagram"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-05",
+      "file": "map/tarout.webp",
+      "alt": {
+        "ar": "قلعة تاروت وسط البلدة القديمة",
+        "en": "Tarout Castle in the heart of the old town"
+      },
+      "caption": {
+        "ar": "قلعة تاروت وسط البلدة القديمة",
+        "en": "Tarout Castle in the heart of the old town"
+      },
+      "sourceUrl": "https://www.instagram.com/p/CU7FzUyqNSv/",
+      "credit": {
+        "ar": "تصوير Khalid Talalwa ‏(@talalwka) على إنستغرام",
+        "en": "Photo by Khalid Talalwa (@talalwka) on Instagram"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-06",
+      "file": "map/dammam.webp",
+      "alt": {
+        "ar": "الواجهة البحرية في الدمام",
+        "en": "The Dammam waterfront"
+      },
+      "caption": {
+        "ar": "الواجهة البحرية في الدمام",
+        "en": "The Dammam waterfront"
+      },
+      "sourceUrl": "https://www.sharqiah.gov.sa/en/media-center/gallery/dammam-city",
+      "credit": {
+        "ar": "إمارة المنطقة الشرقية",
+        "en": "Eastern Province Principality"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-07",
+      "file": "map/dhahran.webp",
+      "alt": {
+        "ar": "مركز الملك عبدالعزيز الثقافي العالمي «إثراء» في الظهران",
+        "en": "The King Abdulaziz Center for World Culture (Ithra) in Dhahran"
+      },
+      "caption": {
+        "ar": "مركز الملك عبدالعزيز الثقافي العالمي «إثراء» في الظهران",
+        "en": "The King Abdulaziz Center for World Culture (Ithra) in Dhahran"
+      },
+      "sourceUrl": "https://saudipedia.com/en/what-is-the-largest-administrative-province-in-saudi-arabia",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-08",
+      "file": "map/khobar.webp",
+      "alt": {
+        "ar": "برج مياه الخبر على الواجهة البحرية",
+        "en": "The Khobar Water Tower on the waterfront"
+      },
+      "caption": {
+        "ar": "برج مياه الخبر على الواجهة البحرية",
+        "en": "The Khobar Water Tower on the waterfront"
+      },
+      "sourceUrl": "https://www.visitsaudi.com/en/eastern-province/attractions/bay-front",
+      "credit": {
+        "ar": "روح السعودية (Visit Saudi)",
+        "en": "Visit Saudi"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-09",
+      "file": "map/jubail.webp",
+      "alt": {
+        "ar": "مرسى القوارب في الجبيل الصناعية",
+        "en": "The marina in Jubail Industrial City"
+      },
+      "caption": {
+        "ar": "مرسى القوارب في الجبيل الصناعية",
+        "en": "The marina in Jubail Industrial City"
+      },
+      "sourceUrl": "https://en.wikipedia.org/wiki/Jubail#/media/File:%D9%85%D8%B1%D8%B3%D9%89_%D8%A7%D9%84%D9%82%D9%88%D8%A7%D8%B1%D8%A8_%D8%A8%D8%A7%D9%84%D8%AC%D8%A8%D9%8A%D9%84_%D8%A7%D9%84%D8%B5%D9%86%D8%A7%D8%B9%D9%8A%D8%A9.jpg",
+      "credit": {
+        "ar": "ويكيبيديا (ويكيميديا كومنز)",
+        "en": "Wikipedia (Wikimedia Commons)"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-10",
+      "file": "map/ras-tanura.webp",
+      "alt": {
+        "ar": "خزانات النفط وميناء رأس تنورة",
+        "en": "Oil storage tanks and the port at Ras Tanura"
+      },
+      "caption": {
+        "ar": "خزانات النفط وميناء رأس تنورة",
+        "en": "Oil storage tanks and the port at Ras Tanura"
+      },
+      "sourceUrl": "https://www.healthandsafetyinternational.com/article/1950460/saudi-aramco-suspends-operations-ras-tanura-refinery",
+      "credit": {
+        "ar": "مجلة Health & Safety International",
+        "en": "Health & Safety International magazine"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    },
+    {
+      "id": "IMG-LOC-11",
+      "file": "map/thaj.webp",
+      "alt": {
+        "ar": "أعمال التنقيب الأثري في ثاج",
+        "en": "Archaeological excavations at Thaj"
+      },
+      "caption": {
+        "ar": "أعمال التنقيب الأثري في ثاج",
+        "en": "Archaeological excavations at Thaj"
+      },
+      "sourceUrl": "https://www.spa.gov.sa/889506",
+      "credit": {
+        "ar": "وكالة الأنباء السعودية (واس)",
+        "en": "Saudi Press Agency (SPA)"
+      },
+      "accuracyReview": "approved",
+      "rightsReview": "approved"
+    }
+  ]
+}

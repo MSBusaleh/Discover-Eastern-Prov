@@ -41,7 +41,7 @@ export default function Sources() {
                     {credit && (
                       <span className="muted small">
                         {' · '}
-                        {m.sourceUrl ? <a href={m.sourceUrl} target="_blank" rel="noopener noreferrer">{credit} <Icon name="external" size={14} /></a> : credit}
+                        {m.sourceUrl ? <a href={m.sourceUrl} target="_blank" rel="noopener noreferrer">{L(credit)} <Icon name="external" size={14} /></a> : L(credit)}
                       </span>
                     )}
                   </span>

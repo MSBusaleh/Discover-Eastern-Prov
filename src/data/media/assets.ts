@@ -1,10 +1,9 @@
 /**
  * Resolves a media entry's `file` to something the browser can load.
  *
- * Photos live as originals in images/<section>/… and are turned into small
- * WebP files by `npm run images` (see scripts/optimize-images.mjs). A media
- * entry keeps the original name (e.g. 'kings/king1.jpg'); photos.json maps it
- * to the optimised file, its size and a tiny blurred preview.
+ * Photos live in src/assets/photos/<section>/… as WebP files prepared by
+ * `npm run images` (see scripts/optimize-images.mjs), which also records each
+ * photo's size and a tiny blurred preview in photos.json.
  * Kept apart from ./index.ts because import.meta.glob only exists under Vite.
  */
 import photos from './photos.json';
@@ -18,13 +17,13 @@ export interface Photo {
 }
 
 const bundled = import.meta.glob<string>('../../assets/photos/**/*.webp', { eager: true, import: 'default' });
-const manifest = photos as Record<string, { src: string; width: number; height: number; blur: string }>;
+const manifest = photos as Record<string, { width: number; height: number; blur: string }>;
 
 export function photoFor(file: string): Photo {
+  const url = bundled[`../../assets/photos/${file}`];
   const p = manifest[file];
-  const url = p && bundled[`../../assets/photos/${p.src}`];
-  // Anything not produced by the pipeline is treated as a path under public/.
-  return url ? { url, width: p.width, height: p.height, blur: p.blur } : { url: file };
+  // Anything that is not in src/assets/photos is treated as a path under public/.
+  return url ? { url, width: p?.width, height: p?.height, blur: p?.blur } : { url: file };
 }
 
 /** Photos already requested, so each one is fetched once per visit. */

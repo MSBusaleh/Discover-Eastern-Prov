@@ -581,7 +581,7 @@
   "images": [
     {
       "id": "IMG-KING-01",
-      "file": "kings/king1.jpg",
+      "file": "kings/king1.webp",
       "alt": {
         "ar": "صورة رسمية لـالملك عبدالعزيز",
         "en": "Official portrait of King Abdulaziz"
@@ -592,40 +592,52 @@
     },
     {
       "id": "IMG-KING-02",
-      "file": "kings/king2.jpg",
+      "file": "kings/king2.webp",
       "alt": {
         "ar": "صورة رسمية لـالملك سعود",
         "en": "Official portrait of King Saud"
       },
       "sourceUrl": "https://saudipedia.com/%D8%B3%D8%B9%D9%88%D8%AF-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     },
     {
       "id": "IMG-KING-03",
-      "file": "kings/king3.jpg",
+      "file": "kings/king3.webp",
       "alt": {
         "ar": "صورة رسمية لـالملك فيصل",
         "en": "Official portrait of King Faisal"
       },
       "sourceUrl": "https://saudipedia.com/%D9%81%D9%8A%D8%B5%D9%84-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     },
     {
       "id": "IMG-KING-04",
-      "file": "kings/king4.jpg",
+      "file": "kings/king4.webp",
       "alt": {
         "ar": "صورة رسمية لـالملك خالد",
         "en": "Official portrait of King Khalid"
       },
       "sourceUrl": "https://saudipedia.com/%D8%AE%D8%A7%D9%84%D8%AF-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     },
     {
       "id": "IMG-KING-05",
-      "file": "kings/king5.png",
+      "file": "kings/king5.webp",
       "alt": {
         "ar": "صورة رسمية لـالملك فهد",
         "en": "Official portrait of King Fahd"
@@ -636,25 +648,33 @@
     },
     {
       "id": "IMG-KING-06",
-      "file": "kings/king6.jpg",
+      "file": "kings/king6.webp",
       "alt": {
         "ar": "صورة رسمية لـالملك عبدالله",
         "en": "Official portrait of King Abdullah"
       },
       "sourceUrl": "https://saudipedia.com/%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D9%84%D9%87-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     },
     {
       "id": "IMG-KING-07",
-      "file": "kings/king7.jpg",
+      "file": "kings/king7.webp",
       "alt": {
         "ar": "صورة رسمية لـالملك سلمان",
         "en": "Official portrait of King Salman"
       },
       "sourceUrl": "https://saudipedia.com/%D8%B3%D9%84%D9%85%D8%A7%D9%86-%D8%A8%D9%86-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A2%D9%84-%D8%B3%D8%B9%D9%88%D8%AF",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "سعوديبيديا",
+        "en": "Saudipedia"
+      }
     }
   ]
 }

@@ -2,7 +2,7 @@
  * Content model for "Discover the Eastern Province".
  *
  * Every content item:
- *  - has a unique, prefixed ID (LOC-001, HIS-001, PER-001, ...). IDs are the ONLY
+ *  - has a unique, prefixed ID (LOC-001, HIS-001, KING-01, ...). IDs are the ONLY
  *    thing used to link items to each other.
  *  - carries separate Arabic and English text (`LocalizedText`).
  *  - carries a `status` so demo / draft material can be hidden from the public
@@ -53,8 +53,8 @@ export type SiteType =
   | 'natural'
   | 'industrial';
 
-/** Map filter themes (brief §5.4). `people` and `royal` are derived automatically. */
-export type MapTheme = 'history' | 'culture' | 'nature' | 'energy' | 'people' | 'royal';
+/** Map filter themes (brief §5.4). `royal` is derived automatically. */
+export type MapTheme = 'history' | 'culture' | 'nature' | 'energy' | 'royal';
 
 export interface Coordinates {
   lat: number;
@@ -74,7 +74,7 @@ export interface Location extends BaseItem {
   parentId?: string;
   /** null → listed in the location list but not drawn on the map. */
   coordinates: Coordinates | null;
-  /** Manually assigned themes. `people`/`royal` are added automatically from relations. */
+  /** Manually assigned themes. `royal` is added automatically from relations. */
   themes: MapTheme[];
   summary: LocalizedText;
   /** Extra linked items that aren't reachable by reverse lookup (optional). */
@@ -96,7 +96,6 @@ export interface HistoricalEvent extends BaseItem {
   era: EraId;
   summary: LocalizedText;
   locationIds: string[];
-  personIds: string[];
   relatedIds?: string[];
 }
 
@@ -110,7 +109,6 @@ export interface UnificationStage extends BaseItem {
   dateLabel: LocalizedText;
   summary: LocalizedText;
   locationIds: string[];
-  personIds: string[];
   eventIds: string[];
 }
 
@@ -134,65 +132,6 @@ export interface KingReign extends BaseItem {
   title: LocalizedText;
   summary: LocalizedText;
   milestones: Milestone[];
-  locationIds: string[];
-  relatedIds?: string[];
-}
-
-/* ------------------------------------------------------------------ */
-/* Personalities                                                        */
-/* ------------------------------------------------------------------ */
-
-export type PersonField =
-  | 'ancient-islamic'
-  | 'unification'
-  | 'literature-heritage'
-  | 'science-education'
-  | 'energy-industry'
-  | 'administration-business'
-  | 'innovation';
-
-/**
- * Brief §9.4 — kept strictly apart:
- * from-region   = documented birthplace / upbringing / origin in the Eastern Province.
- * associated    = studied / worked / contributed here, origin elsewhere or undocumented.
- */
-export type OriginType = 'from-region' | 'associated';
-
-export interface Personality extends BaseItem {
-  name: LocalizedText;
-  periodLabel: LocalizedText;
-  sortYear: number | null;
-  fields: PersonField[];
-  originType: OriginType;
-  biography: LocalizedText;
-  contributions: LocalizedText[];
-  connection: LocalizedText;
-  locationIds: string[];
-  eventIds: string[];
-}
-
-/* ------------------------------------------------------------------ */
-/* Today & Tomorrow                                                     */
-/* ------------------------------------------------------------------ */
-
-export type TopicCategoryId =
-  | 'tourism'
-  | 'nature'
-  | 'culture'
-  | 'energy'
-  | 'education'
-  | 'business'
-  | 'lifestyle'
-  | 'connectivity';
-
-/** Brief §10.4 — never show a plan as if it were finished. */
-export type DevelopmentStage = 'existing' | 'in-progress' | 'announced';
-
-export interface ContemporaryTopic extends BaseItem {
-  categoryIds: TopicCategoryId[];
-  stage: DevelopmentStage;
-  title: LocalizedText;
-  summary: LocalizedText;
   locationIds: string[];
   relatedIds?: string[];
 }
@@ -225,6 +164,8 @@ export interface MediaAsset {
   alt: LocalizedText;
   caption?: LocalizedText;
   sourceUrl?: string;
+  /** How the source is named on screen, e.g. "UNESCO World Heritage Centre". */
+  credit?: LocalizedText;
   rightsHolder?: string;
   license?: string;
   attribution?: string;
@@ -237,6 +178,4 @@ export type AnyItem =
   | { type: 'location'; item: Location }
   | { type: 'event'; item: HistoricalEvent }
   | { type: 'stage'; item: UnificationStage }
-  | { type: 'reign'; item: KingReign }
-  | { type: 'person'; item: Personality }
-  | { type: 'topic'; item: ContemporaryTopic };
+  | { type: 'reign'; item: KingReign };

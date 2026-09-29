@@ -13,12 +13,6 @@ Bundled basemap drawn by the interactive map (no tiles, no API).
   sourced coordinates and are unaffected.
 - To replace with an official boundary file, keep the same `role` property.
 
-# bluemarble-arabian-gulf.jpg (src/assets/map)
-
-NASA Blue Marble: Next Generation (public domain), cropped to lon 32–68 / lat 8–38,
-reprojected to Web Mercator and softened. Used as the always-available satellite
-background; online Sentinel-2 tiles draw on top when the device has internet.
-
 # detail.json
 
 Natural Earth 1:10m `ne_10m_urban_areas` and `ne_10m_roads`, clipped to

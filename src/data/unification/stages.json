@@ -20,7 +20,6 @@
         "LOC-001",
         "LOC-002"
       ],
-      "personIds": [],
       "eventIds": [
         "HIS-003"
       ],
@@ -54,7 +53,6 @@
         "LOC-011",
         "LOC-002"
       ],
-      "personIds": [],
       "eventIds": [
         "HIS-005"
       ],
@@ -87,7 +85,6 @@
         "LOC-007",
         "LOC-010"
       ],
-      "personIds": [],
       "eventIds": [],
       "sourceIds": [
         "SRC-015",
@@ -115,7 +112,6 @@
         "en": "When the unification of the \"Kingdom of Saudi Arabia\" was declared, the Eastern Province (or the Province of Al-Ahsa, as it was then known) enjoyed full administrative and political security. This stability became the most important groundwork for the historic event that later transformed the region: the discovery of oil in its lands, which launched the journey of modern development."
       },
       "locationIds": [],
-      "personIds": [],
       "eventIds": [
         "HIS-005"
       ],
@@ -182,7 +178,7 @@
   "images": [
     {
       "id": "IMG-UNI-01",
-      "file": "unification/unification1.jpg",
+      "file": "unification/unification1.webp",
       "alt": {
         "ar": "صورة بالأبيض والأسود لمبنى طيني كبير في الأحساء، يمر أمامه أهالٍ وقافلة من الجمال",
         "en": "Black-and-white photo of a large mud-brick building in Al-Ahsa, with people and a camel caravan passing in front"
@@ -197,7 +193,7 @@
     },
     {
       "id": "IMG-UNI-02",
-      "file": "unification/unification2.jpg",
+      "file": "unification/unification2.webp",
       "alt": {
         "ar": "صورة من أعلى لساحة مزدحمة بالرجال أمام مبنى ذي أقواس في الأحساء",
         "en": "High-angle photo of a square crowded with men in front of an arcaded building in Al-Ahsa"
@@ -212,7 +208,7 @@
     },
     {
       "id": "IMG-UNI-03",
-      "file": "unification/unification3.jpg",
+      "file": "unification/unification3.webp",
       "alt": {
         "ar": "الملك عبدالعزيز جالسًا أمام خيمة مع رجلين بلباس غربي",
         "en": "King Abdulaziz seated in front of a tent with two men in Western dress"
@@ -223,11 +219,15 @@
       },
       "sourceUrl": "https://ar.wikipedia.org/wiki/%D9%85%D8%B9%D8%A7%D9%87%D8%AF%D8%A9_%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%B1#/media/%D9%85%D9%84%D9%81:%D8%A7%D9%84%D9%85%D9%84%D9%83_%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2_%D9%85%D8%B9_%D8%A8%D9%88%D8%B3%D9%8A_%D9%83%D9%88%D9%83%D8%B3_%D9%81%D9%8A_%D8%A7%D9%84%D8%B9%D9%82%D9%8A%D8%B1_%D8%B9%D8%A7%D9%85_1922.jpg",
       "accuracyReview": "approved",
-      "rightsReview": "approved"
+      "rightsReview": "approved",
+      "credit": {
+        "ar": "ويكيبيديا العربية",
+        "en": "Arabic Wikipedia"
+      }
     },
     {
       "id": "IMG-UNI-04",
-      "file": "unification/unification4.jpg",
+      "file": "unification/unification4.webp",
       "alt": {
         "ar": "صفحة من جريدة أم القرى تنشر الأمر الملكي رقم 2716 بتحويل اسم الدولة",
         "en": "A page of the Umm al-Qura newspaper publishing Royal Decree No. 2716 renaming the state"
