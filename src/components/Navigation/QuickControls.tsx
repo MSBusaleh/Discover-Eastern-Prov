@@ -13,7 +13,8 @@ export function QuickControls() {
       </button>
       <button type="button" className="lang-btn" onClick={toggleLang} aria-label={t('switchLangLabel')} lang={lang === 'ar' ? 'en' : 'ar'}>
         <Icon name="globe" size={18} />
-        <span>{t('switchLang')}</span>
+        <span className="lang-full">{t('switchLang')}</span>
+        <span className="lang-short" aria-hidden="true">{t('switchLangShort')}</span>
       </button>
     </>
   );

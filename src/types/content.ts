@@ -150,8 +150,6 @@ export interface Source {
   accessed: string;
   /** What this source is used for in the site. */
   usedFor: LocalizedText;
-  /** Prototype sources that should be replaced by an official/primary one. */
-  replaceBeforeLaunch?: boolean;
 }
 
 export type ReviewState = 'pending' | 'approved' | 'rejected';

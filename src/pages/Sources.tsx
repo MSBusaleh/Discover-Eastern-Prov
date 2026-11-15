@@ -23,7 +23,6 @@ export default function Sources() {
                   : `${L(s.publisher)}: ${L(s.title)}`}
                 <span className="muted small"> · {L(s.usedFor)} · {t('accessed')} <span className="mono">{s.accessed}</span></span>
               </span>
-              {s.replaceBeforeLaunch && <span className="tag-inline">{t('prototypeSource')}</span>}
             </li>
           ))}
         </ol>
@@ -54,7 +53,7 @@ export default function Sources() {
       <section className="prose-block">
         <h2 className="section-title">{t('mapCredits')}</h2>
         <p>
-          <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> (public domain) ·{' '}
+          <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener noreferrer">Natural Earth</a> ({t('publicDomain')}) ·{' '}
           <span dangerouslySetInnerHTML={{ __html: siteConfig.map.terrain.attribution }} />
         </p>
       </section>

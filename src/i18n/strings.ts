@@ -11,6 +11,7 @@ export const strings = {
   tagline: s('أرض الحضارات، وقصة التوحيد، وآفاق المستقبل', 'A land of ancient civilisations, the story of unification and a future in the making'),
   startExploring: s('ابدأ الاستكشاف', 'Start exploring'),
   switchLang: s('English', 'العربية'),
+  switchLangShort: s('EN', 'ع'),
   switchLangLabel: s('Switch to English', 'التبديل إلى العربية'),
   home: s('الرئيسية', 'Home'),
   darkMode: s('الوضع الداكن', 'Dark mode'),
@@ -28,6 +29,11 @@ export const strings = {
   navUnification: s('الشرقية ومسيرة التوحيد', 'The Eastern Province and the Unification of Saudi Arabia'),
   navRoyal: s('مسيرة الشرقية عبر عهود الملوك', 'The Eastern Province Through the Reigns of Its Kings'),
   navSources: s('المصادر والحقوق', 'Sources & credits'),
+  footerCredit: s(
+    'مشروع من إعداد الفرع الطلابي لجمعية مهندسي البترول (SPE) بجامعة الملك فهد للبترول والمعادن',
+    'A project by the SPE Student Chapter at King Fahd University of Petroleum & Minerals',
+  ),
+  speLogoAlt: s('شعار الفرع الطلابي لجمعية مهندسي البترول بجامعة الملك فهد للبترول والمعادن', 'SPE Student Chapter, King Fahd University of Petroleum & Minerals'),
 
   shortExplore: s('الخريطة', 'Map'),
   shortTimeline: s('عبر الزمن', 'Timeline'),
@@ -38,10 +44,6 @@ export const strings = {
   blurbUnification: s('من دخول الأحساء عام 1913م إلى إعلان المملكة عام 1932م', 'From Al-Ahsa in 1913 to the founding of the Kingdom in 1932'),
   blurbRoyal: s('ما حققته الشرقية في عهد كل ملك', 'What each reign brought to the province'),
 
-  prototypeNote: s(
-    'نموذج أولي أُعدّ لجناح فرع SPE الطلابي بجامعة الملك فهد للبترول والمعادن في اليوم الوطني 2026م، وليس منصة رسمية لـSPE.',
-    'A prototype made for the SPE KFUPM Student Chapter booth for National Day 2026. It is not an official SPE website.',
-  ),
 
   // Map
   mapTitle: s('خريطة المنطقة الشرقية', 'Map of the Eastern Province'),
@@ -53,8 +55,6 @@ export const strings = {
 
 
   // Generic content states
-  pendingText: s('نعمل على إعداد هذا المحتوى', 'This content is on its way'),
-  imagePending: s('الصورة قيد الاعتماد', 'Photo awaiting approval'),
   sources: s('المصادر', 'Sources'),
   imageSource: s('المصدر', 'Source'),
 
@@ -80,17 +80,16 @@ export const strings = {
   idleText: s('ستعود الشاشة إلى البداية استعدادًا للزائر التالي خلال', 'The screen will go back to the start for the next visitor in'),
   seconds: s('ثانية', 'seconds'),
   keepExploring: s('أكمل الاستكشاف', 'Keep exploring'),
-  boothOn: s('وضع الجناح مفعّل', 'Booth mode on'),
 
   // Sources page
   sourcesIntro: s(
-    'لكل معلومة في هذا الموقع مصدر يمكنك الرجوع إليه. المصادر الموسومة بـ«مصدر مؤقت» استُخدمت في النموذج الأولي فقط، وستُستبدل بمصادر رسمية قبل الإطلاق.',
-    'Every fact on this site comes with a source you can check. Sources tagged “Temporary source” were used for the prototype only and will be replaced with official ones before launch.',
+    'تستند معلومات هذا الموقع وصوره إلى المصادر التالية، ويمكنك فتح كل مصدر للاطلاع عليه.',
+    'The information and photos on this site draw on the sources below. Each one links to the original where available.',
   ),
   imageCredits: s('مصادر الصور', 'Photo credits'),
   noImages: s('لا توجد صور منشورة بعد.', 'No photos have been published yet.'),
   mapCredits: s('بيانات الخريطة', 'Map data'),
-  prototypeSource: s('مصدر مؤقت', 'Temporary source'),
+  publicDomain: s('ملكية عامة', 'public domain'),
   accessed: s('تاريخ الاطلاع', 'Accessed'),
   notFound: s('لم نجد هذه الصفحة.', 'We couldn’t find that page.'),
 };

@@ -236,11 +236,12 @@ export function MapView({ locations, selectedId, onSelect, compact, initialView,
     });
     cluster.addLayers(markers);
 
-    if (firstFit.current && !initialView && compact) {
-      // Home: show the whole province outline.
+    if (firstFit.current && !initialView && compact && withCoords.length) {
+      // Home: open on the inhabited north of the province, where every place
+      // is, with some coast and desert around it for context.
       firstFit.current = false;
-      const prov = geo.features.find((f) => f.properties?.role === 'province');
-      if (prov) map.fitBounds(L.geoJSON(prov).getBounds(), { padding: [16, 16] });
+      const places = L.latLngBounds(withCoords.map((l) => [l.coordinates!.lat, l.coordinates!.lng]));
+      map.fitBounds(places.pad(0.45), { padding: [16, 16], maxZoom: 8 });
     }
     if (firstFit.current && !initialView && withCoords.length) {
       firstFit.current = false;

@@ -5,12 +5,12 @@ import type { ContentStatus } from '@/types/content';
  */
 export const siteConfig = {
   /**
-   * Which content statuses are visible. For the public event build, set this
-   * to ['approved'] so every demo / draft item disappears automatically.
+   * Which content statuses are visible. All current content is 'draft', so
+   * keep 'draft' here: switching to ['approved'] alone would empty every section.
    */
   visibleStatuses: ['demo', 'draft', 'approved'] as ContentStatus[],
 
-  /** Show small "Sample" / "Draft" badges on items (useful for reviewers). */
+  /** Show small status badges on items. Keep false on the public site; for internal review only. */
   showStatusBadges: false,
 
   /** Default language on first load and after a booth reset. */

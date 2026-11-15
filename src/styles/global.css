@@ -1,8 +1,8 @@
 /* =====================================================================
    Discover the Eastern Province — design tokens and styles
    Palette: limestone ground, palm green, Gulf teal, date gold.
-   Type: Reem Kufi (display, used sparingly) · IBM Plex Sans Arabic (body,
-   Arabic + Latin) · IBM Plex Mono (IDs, dates, coordinates).
+   Type: Saudi (Ministry of Culture) for all text; IBM Plex Mono for the
+   digits in dates. IBM Plex Sans Arabic / Reem Kufi are fallbacks only.
    All layout uses logical properties so RTL/LTR both read naturally.
    ===================================================================== */
 
@@ -16,6 +16,10 @@
   --c-primary: #0f4a3a;
   --c-primary-hover: #0a3a2d;
   --c-on-primary: #f4f7f2;
+  /* Solid green surfaces (buttons, selected items, date pills). */
+  --c-fill: #0f4a3a;
+  --c-fill-hover: #0a3a2d;
+  --c-on-fill: #f4f7f2;
   --c-teal: #17707a;
   --c-teal-ink: #0f5760;
   --c-teal-soft: #d6e9e8;
@@ -36,7 +40,7 @@
   /* Saudi / Alawwal (Ministry of Culture) load from public/fonts; the rest are fallbacks. */
   --f-body: 'Saudi', 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, system-ui, sans-serif;
   --f-display: 'Alawwal', 'Saudi', 'Reem Kufi', 'IBM Plex Sans Arabic', 'Segoe UI', sans-serif;
-  --f-mono: 'IBM Plex Mono', 'IBM Plex Sans Arabic', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --f-mono: 'IBM Plex Mono', 'Saudi', 'IBM Plex Sans Arabic', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
   --radius: 8px;
   --radius-sm: 5px;
@@ -57,6 +61,10 @@
     --c-primary: #3fa27d;
     --c-primary-hover: #52b690;
     --c-on-primary: #06130e;
+    /* Deeper than --c-primary so filled surfaces don't glare at night. */
+    --c-fill: #1d5c47;
+    --c-fill-hover: #236c54;
+    --c-on-fill: #eaf4ee;
     --c-teal: #5bb6be;
     --c-teal-ink: #8ad0d6;
     --c-teal-soft: #173236;
@@ -70,9 +78,6 @@
     --c-land: #17221e;
     --c-land-line: #2f413a;
     --c-province: #22352d;
-  --c-urban: #34443b;
-  --c-road: #3f5048;
-  --c-road-major: #8a7445;
     --c-urban: #34443b;
     --c-road: #3f5048;
     --c-road-major: #8a7445;
@@ -89,6 +94,10 @@
   --c-primary: #3fa27d;
   --c-primary-hover: #52b690;
   --c-on-primary: #06130e;
+  /* Deeper than --c-primary so filled surfaces don't glare at night. */
+  --c-fill: #1d5c47;
+  --c-fill-hover: #236c54;
+  --c-on-fill: #eaf4ee;
   --c-teal: #5bb6be;
   --c-teal-ink: #8ad0d6;
   --c-teal-soft: #173236;
@@ -127,7 +136,7 @@ html[lang='en'] body { line-height: 1.55; }
 img { max-width: 100%; display: block; }
 a { color: var(--c-teal-ink); text-underline-offset: 3px; }
 h1, h2, h3, h4 { line-height: 1.25; margin: 0; text-wrap: balance; }
-p { margin: 0; }
+p { margin: 0; text-wrap: pretty; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
 button { font: inherit; color: inherit; cursor: pointer; }
 select { font: inherit; }
@@ -140,7 +149,7 @@ main:focus { outline: none; }
 .icon { flex-shrink: 0; }
 .section-title { font-size: 1.35rem; display: flex; align-items: center; gap: 10px; }
 
-.skip-link { position: absolute; inset-inline-start: 12px; top: -60px; background: var(--c-primary); color: var(--c-on-primary); padding: 10px 16px; border-radius: var(--radius-sm); z-index: 2000; }
+.skip-link { position: absolute; inset-inline-start: 12px; top: -60px; background: var(--c-fill); color: var(--c-on-fill); padding: 10px 16px; border-radius: var(--radius-sm); z-index: 2000; }
 .skip-link:focus { top: 10px; }
 
 /* ---------------- Buttons & controls ---------------- */
@@ -154,8 +163,8 @@ main:focus { outline: none; }
 .btn:active { transform: translateY(1px); }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .btn-lg { min-height: calc(var(--tap) + 8px); padding-inline: 28px; font-size: 1.1rem; }
-.btn-primary { background: var(--c-primary); color: var(--c-on-primary); }
-.btn-primary:hover:not(:disabled) { background: var(--c-primary-hover); }
+.btn-primary { background: var(--c-fill); color: var(--c-on-fill); }
+.btn-primary:hover:not(:disabled) { background: var(--c-fill-hover); }
 .btn-secondary { background: var(--c-teal-soft); color: var(--c-teal-ink); }
 .btn-secondary:hover { border-color: var(--c-teal); }
 .btn-ghost { background: var(--c-surface); border-color: var(--c-line); }
@@ -176,7 +185,7 @@ main:focus { outline: none; }
   background: var(--c-surface); font-weight: 500; font-size: 0.95rem;
 }
 .chip:hover { border-color: var(--c-ink-soft); }
-.chip.is-selected { background: var(--c-primary); border-color: var(--c-primary); color: var(--c-on-primary); }
+.chip.is-selected { background: var(--c-fill); border-color: var(--c-fill); color: var(--c-on-fill); }
 .chip-count { font-family: var(--f-mono); font-size: 0.78rem; padding-inline: 7px; border-radius: 999px; background: var(--c-surface-2); color: var(--c-ink-soft); }
 .chip.is-selected .chip-count { background: rgb(255 255 255 / 0.2); color: inherit; }
 
@@ -185,12 +194,7 @@ main:focus { outline: none; }
 .status-badge { display: inline-flex; align-items: center; font-size: 0.74rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; white-space: nowrap; line-height: 1.5; }
 .status-demo { border: 1.5px dashed var(--c-ink-soft); color: var(--c-ink-soft); }
 .status-draft { background: var(--c-gold-soft); color: var(--c-gold-ink); }
-.tag-inline { display: inline-block; font-size: 0.74rem; font-weight: 700; padding: 1px 7px; border-radius: 4px; background: var(--c-surface-2); color: var(--c-ink-soft); margin-inline-start: 6px; }
 
-.pending-text {
-  color: var(--c-ink-soft); font-size: 0.95rem;
-  border-inline-start: 3px dashed var(--c-line); padding-inline-start: 12px; padding-block: 2px;
-}
 
 /* ---------------- Header ---------------- */
 .site-header {
@@ -204,7 +208,7 @@ main:focus { outline: none; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--c-ink); flex-shrink: 1; min-width: 0; }
 .emblem { flex-shrink: 0; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; min-width: 0; }
-.brand-name { font-family: var(--f-display); font-weight: 600; font-size: 1.2rem; color: var(--c-primary); }
+.brand-name { font-family: var(--f-display); font-weight: 600; font-size: 1.2rem; color: var(--c-primary); white-space: nowrap; }
 .primary-nav { flex: 1; min-width: 0; }
 .primary-nav ul { display: flex; gap: 2px; justify-content: center; }
 .primary-nav a {
@@ -219,9 +223,9 @@ main:focus { outline: none; }
   display: inline-flex; align-items: center; gap: 6px; min-height: var(--tap); padding-inline: 14px;
   border-radius: 999px; border: 1.5px solid var(--c-primary); background: var(--c-surface); color: var(--c-primary); font-weight: 700;
 }
-.lang-btn:hover { background: var(--c-primary); color: var(--c-on-primary); }
-.booth-flag { font-size: 0.75rem; font-weight: 700; color: var(--c-gold-ink); background: var(--c-gold-soft); padding: 3px 8px; border-radius: 4px; }
+.lang-btn:hover { background: var(--c-fill); color: var(--c-on-fill); }
 .menu-btn { display: none; }
+.lang-short { display: none; }
 .mobile-nav { border-block-start: 1px solid var(--c-line); background: var(--c-surface); }
 .mobile-nav ul { display: grid; gap: 2px; padding: 8px var(--gutter) 16px; max-width: 1400px; margin-inline: auto; }
 .mobile-nav a { display: flex; align-items: center; gap: 12px; min-height: 52px; padding-inline: 12px; border-radius: var(--radius-sm); text-decoration: none; color: var(--c-ink); font-weight: 500; }
@@ -233,19 +237,22 @@ main:focus { outline: none; }
 }
 @media (max-width: 560px) {
   .brand-name { font-size: 1.05rem; }
-  html[lang='en'] .brand-name { font-size: 0.92rem; line-height: 1.15; }
+  /* The English name is long: a deliberate two-line lockup ("Discover the / Eastern Province"). */
+  html[lang='en'] .brand-name { font-size: 0.9rem; line-height: 1.15; white-space: normal; text-wrap: balance; max-width: 9.5em; }
   .header-bar { gap: 10px; }
   .header-actions { gap: 6px; }
   /* Filter chips scroll sideways instead of stacking five rows deep. */
   .page-explore .filters { flex-wrap: nowrap; overflow-x: auto; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); padding-block-end: 4px; scrollbar-width: none; }
   .page-explore .filters > * { flex-shrink: 0; }
   .home-btn { display: none; }
-  .lang-btn { padding-inline: 10px; }
-  .booth-flag { display: none; }
+  .lang-btn { padding-inline: 12px; }
+  .lang-full { display: none; }
+  .lang-short { display: inline; }
 }
 
 /* ---------------- Page frame ---------------- */
-main { min-height: 60vh; }
+#root { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+main { flex: 1 0 auto; }
 .page { max-width: 1400px; margin-inline: auto; padding-inline: var(--gutter); padding-block: 28px 56px; display: flex; flex-direction: column; gap: 24px; }
 .page-loading { min-height: 50vh; }
 
@@ -268,7 +275,7 @@ main { min-height: 60vh; }
   font-size: clamp(2.5rem, 1.5rem + 4.4vw, 4.6rem); line-height: 1.1;
 }
 html[lang='en'] .hero-title { font-size: clamp(2.2rem, 1.3rem + 3.6vw, 4rem); letter-spacing: -0.01em; }
-.hero-tagline { font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.35rem); color: var(--c-ink-soft); max-width: 34ch; }
+.hero-tagline { text-wrap: balance; font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.35rem); color: var(--c-ink-soft); max-width: 34ch; }
 .hero-map { display: flex; flex-direction: column; }
 .hero-map .map-canvas { height: clamp(360px, 62vh, 620px); }
 
@@ -378,7 +385,7 @@ html[lang='ar'] .card-head h2 { font-family: var(--f-display); font-weight: 600;
 .media-frame { position: relative; width: 100%; max-width: 100%; margin: 0; border-radius: var(--radius-sm); overflow: hidden; background: var(--c-surface-2); }
 .media-frame img { width: 100%; height: 100%; object-fit: cover; }
 .media-figure { display: flex; flex-direction: column; gap: 8px; margin: 0; min-width: 0; }
-.media-frame.is-image { display: grid; place-items: center; }
+.media-frame.is-image { display: grid; place-items: center; background: transparent; }
 .media-frame.is-image img { height: auto; max-height: min(70vh, 560px); object-fit: contain; }
 /* Photo loading: the blurred preview fills the photo's space until the photo fades in. */
 .photo { position: relative; }
@@ -402,7 +409,6 @@ html[lang='ar'] .card-head h2 { font-family: var(--f-display); font-weight: 600;
           mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 6l3.5 10.5L34 20l-10.5 3.5L20 34l-3.5-10.5L6 20l10.5-3.5z' fill='none' stroke='black' stroke-width='1.2'/%3E%3C/svg%3E") repeat;
 }
 .placeholder-body { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 12px; text-align: center; color: var(--c-teal-ink); }
-.placeholder-note { font-size: 0.8rem; color: var(--c-ink-soft); background: var(--c-surface); padding: 1px 8px; border-radius: 4px; }
 
 /* ---------------- Detail card (timeline / unification / kings) ---------------- */
 .detail-card {
@@ -414,7 +420,7 @@ html[lang='ar'] .card-head h2 { font-family: var(--f-display); font-weight: 600;
 .detail-body h1, .detail-body h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); }
 html[lang='ar'] .detail-body h1, html[lang='ar'] .detail-body > h2 { font-family: var(--f-display); font-weight: 600; }
 .detail-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
-.date-pill { display: inline-block; padding: 3px 10px; border-radius: 4px; background: var(--c-primary); color: var(--c-on-primary); font-weight: 400; }
+.date-pill { display: inline-block; padding: 3px 10px; border-radius: 4px; background: var(--c-fill); color: var(--c-on-fill); font-weight: 400; }
 .map-links { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .pill-link { display: inline-flex; align-items: center; gap: 4px; min-height: 40px; padding-inline: 12px; border-radius: 999px; background: var(--c-teal-soft); color: var(--c-teal-ink); text-decoration: none; font-weight: 700; font-size: 0.88rem; }
 .pill-link:hover { outline: 1.5px solid var(--c-teal); }
@@ -445,7 +451,7 @@ html[lang='ar'] .detail-body h1, html[lang='ar'] .detail-body > h2 { font-family
 .track-title { font-weight: 700; line-height: 1.35; padding: 12px; border-radius: var(--radius-sm); background: var(--c-surface); border: 1px solid var(--c-line); width: 100%; min-height: 92px; }
 .track-item button:hover .track-title { border-color: var(--c-teal); }
 .track-item.is-selected .track-dot { background: var(--c-gold); border-color: var(--c-primary); transform: scale(1.25); }
-.track-item.is-selected .track-title { background: var(--c-primary); color: var(--c-on-primary); border-color: var(--c-primary); }
+.track-item.is-selected .track-title { background: var(--c-fill); color: var(--c-on-fill); border-color: var(--c-fill); }
 @media (max-width: 700px) {
   /* Phones: current event first, full list below as an index. */
 
@@ -470,7 +476,7 @@ html[lang='ar'] .detail-body h1, html[lang='ar'] .detail-body > h2 { font-family
 .step-label { display: flex; flex-direction: column; gap: 2px; font-weight: 700; line-height: 1.35; font-size: 0.95rem; }
 .step-date { font-size: 0.8rem; color: var(--c-ink-soft); font-weight: 400; }
 .stage-steps .is-done .step-num { background: var(--c-teal-soft); }
-.stage-steps .is-current button { border-color: var(--c-primary); background: var(--c-primary); color: var(--c-on-primary); }
+.stage-steps .is-current button { border-color: var(--c-fill); background: var(--c-fill); color: var(--c-on-fill); }
 .stage-steps .is-current .step-num { background: var(--c-gold); border-color: var(--c-gold); color: #1c1402; }
 .stage-steps .is-current .step-date { color: inherit; opacity: 0.85; }
 @media (max-width: 860px) { .stage-steps { grid-template-columns: minmax(0, 1fr); } .stage-steps button { min-height: 60px; align-items: center; } }
@@ -490,6 +496,12 @@ html[lang='ar'] .detail-body h1, html[lang='ar'] .detail-body > h2 { font-family
 
 /* ---------------- Kings ---------------- */
 .page-kings .track-title { min-height: 0; }
+@media (min-width: 701px) {
+  .page-kings .track { overflow-x: visible; }
+  .page-kings .track-item { flex: 1 1 0; min-width: 0; }
+}
+.page-kings .detail-card { align-items: start; }
+.page-kings .media-frame.is-image img { max-height: min(62vh, 480px); }
 .reign-head { display: flex; flex-direction: column; gap: 4px; }
 .reign-theme { font-size: 1.1rem; font-weight: 700; color: var(--c-teal-ink); }
 .milestones { display: flex; flex-direction: column; gap: 10px; }
@@ -507,12 +519,17 @@ html[lang='ar'] .detail-body h1, html[lang='ar'] .detail-body > h2 { font-family
 .source-table { display: flex; flex-direction: column; }
 .source-table li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding-block: 10px; border-block-end: 1px solid var(--c-line); }
 .source-table a { overflow-wrap: anywhere; }
+.source-table .mono { white-space: nowrap; font-size: 0.82em; }
 @media (max-width: 620px) { .source-table li { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
 
 /* ---------------- Footer ---------------- */
 .site-footer { background: var(--c-surface); border-block-start: 1px solid var(--c-line); margin-block-start: 24px; }
 .footer-inner { max-width: 1400px; margin-inline: auto; padding: 20px var(--gutter) 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 28px; }
-.footer-note { flex: 1 1 320px; margin: 0; font-size: 0.85rem; line-height: 1.6; color: var(--c-ink-soft); max-width: 75ch; }
+.footer-credit { flex: 1 1 320px; display: flex; align-items: center; gap: 14px; min-width: 0; }
+/* The logo is a white-background JPEG: a small white tile keeps it clean in both themes. */
+.footer-logo { flex-shrink: 0; display: grid; place-items: center; padding: 6px 8px; border-radius: var(--radius-sm); background: #fff; border: 1px solid var(--c-line); }
+.footer-logo img { width: 84px; height: auto; }
+.footer-note { margin: 0; font-size: 0.85rem; line-height: 1.6; color: var(--c-ink-soft); max-width: 60ch; }
 .footer-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 700; flex-shrink: 0; }
 
 /* ---------------- Booth idle overlay ---------------- */
@@ -530,7 +547,7 @@ html[lang='ar'] .detail-body h1, html[lang='ar'] .detail-body > h2 { font-family
 /* ---------------- Simplified layout additions ---------------- */
 .page-title { display: flex; align-items: center; gap: 12px; font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.2rem); }
 html[lang='ar'] .page-title { font-family: var(--f-display); font-weight: 600; }
-.page-title-mark { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: var(--radius); background: var(--c-primary); color: var(--c-gold); }
+.page-title-mark { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: var(--radius); background: var(--c-fill); color: var(--c-gold); }
 .pill-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .pill-row .pill-link { border: 0; font: inherit; font-weight: 700; font-size: 0.92rem; min-height: 44px; }
 .explore-panel .place-list { background: var(--c-surface); border: 1px solid var(--c-line); border-radius: var(--radius); padding-inline: 8px; }
@@ -555,7 +572,7 @@ html[lang='ar'] .page-title { font-family: var(--f-display); font-weight: 600; }
   border: 0; border-radius: 999px; background: none; font-weight: 700; font-size: 0.88rem; color: var(--c-ink-soft);
   transition: background-color 0.2s, color 0.2s;
 }
-.map-modes button.is-selected { background: var(--c-primary); color: var(--c-on-primary); }
+.map-modes button.is-selected { background: var(--c-fill); color: var(--c-on-fill); }
 @media (max-width: 480px) { .map-modes button span { display: none; } .map-modes button { padding-inline: 10px; } }
 
 /* ---------------- Home without header ---------------- */
@@ -601,7 +618,7 @@ body { transition: background-color 0.35s ease, color 0.35s ease; }
 
 .entry-card { min-height: 132px; gap: 6px; padding: 16px 12px; }
 .entry-card .entry-title { font-size: 1.05rem; }
-.entry-card .entry-blurb { font-weight: 400; font-size: 0.85rem; line-height: 1.4; color: var(--c-ink-soft); max-width: 22ch; }
+.entry-card .entry-blurb { text-wrap: balance; font-weight: 400; font-size: 0.85rem; line-height: 1.4; color: var(--c-ink-soft); max-width: 22ch; }
 @media (max-width: 620px) { .entry-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) { .entry-grid li:last-child:nth-child(odd) { grid-column: 1 / -1; } }
 

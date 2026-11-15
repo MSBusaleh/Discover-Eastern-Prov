@@ -36,13 +36,12 @@ function Photo({ file, alt }: { file: string; alt: string }) {
 }
 
 /**
- * Shows the first approved image of an item, or a designed placeholder.
- * Placeholders are original geometric patterns, clearly labelled, so they can
- * never be mistaken for a historical photograph.
+ * Shows the first approved image of an item. Without one, it shows a quiet
+ * decorative panel in the site's own pattern (never an invented photograph).
  */
 export function MediaFrame({
-  imageIds, label, icon = 'image', ratio = '16 / 9', note,
-}: { imageIds: string[]; label?: string; icon?: IconName; ratio?: string; note?: string }) {
+  imageIds, label, icon = 'image', ratio = '16 / 9',
+}: { imageIds: string[]; label?: string; icon?: IconName; ratio?: string }) {
   const { L, t } = useLang();
   const img = imageIds.map((id) => mediaById.get(id)).find(isDisplayable);
 
@@ -68,11 +67,10 @@ export function MediaFrame({
   }
 
   return (
-    <div className="media-frame media-placeholder" style={{ aspectRatio: ratio }} role="img" aria-label={`${label ?? ''} — ${t('imagePending')}`}>
+    <div className="media-frame media-placeholder" style={{ aspectRatio: ratio }} role="img" aria-label={label}>
       <div className="placeholder-pattern" aria-hidden="true" />
-      <div className="placeholder-body">
-        <Icon name={icon} size={28} />
-        <span className="placeholder-note">{note ?? t('imagePending')}</span>
+      <div className="placeholder-body" aria-hidden="true">
+        <Icon name={icon} size={32} />
       </div>
     </div>
   );

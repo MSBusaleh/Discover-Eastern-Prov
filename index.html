@@ -3,15 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0F4A3A" />
-    <meta name="description" content="اكتشف الشرقية | Discover the Eastern Province — an interactive exploration of the Eastern Province of Saudi Arabia." />
+    <meta name="theme-color" content="#0F4A3A" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0C1512" media="(prefers-color-scheme: dark)" />
     <title>اكتشف الشرقية | Discover the Eastern Province</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230F4A3A'/%3E%3Cpath d='M16 5l3.2 7.8L27 16l-7.8 3.2L16 27l-3.2-7.8L5 16l7.8-3.2z' fill='%23D39B2A'/%3E%3C/svg%3E" />
+    <meta name="description" content="اكتشف المنطقة الشرقية عبر خريطة تفاعلية، ورحلة عبر الزمن، ومسيرة التوحيد، وعهود الملوك. Explore Saudi Arabia's Eastern Province through an interactive map, its history, its unification and the reigns of its kings." />
+
+    <!-- Link previews (WhatsApp, X, LinkedIn, iMessage …). %SITE_URL% is filled in at build time. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="اكتشف الشرقية | Discover the Eastern Province" />
+    <meta property="og:title" content="اكتشف الشرقية | Discover the Eastern Province" />
+    <meta property="og:description" content="خريطة تفاعلية ورحلة عبر تاريخ المنطقة الشرقية ومسيرة التوحيد وعهود الملوك. An interactive journey through the Eastern Province of Saudi Arabia." />
+    <meta property="og:url" content="%SITE_URL%" />
+    <meta property="og:image" content="%SITE_URL%og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="اكتشف الشرقية — Discover the Eastern Province" />
+    <meta property="og:locale" content="ar_SA" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="اكتشف الشرقية | Discover the Eastern Province" />
+    <meta name="twitter:description" content="خريطة تفاعلية ورحلة عبر تاريخ المنطقة الشرقية. An interactive journey through Saudi Arabia's Eastern Province." />
+    <meta name="twitter:image" content="%SITE_URL%og-image.jpg" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="fonts/fonts.css" />
   </head>
   <body>
     <div id="root"></div>
-    <noscript>This site needs JavaScript. | يتطلب هذا الموقع تفعيل JavaScript.</noscript>
+    <noscript>يتطلب هذا الموقع تفعيل JavaScript. | This site needs JavaScript.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

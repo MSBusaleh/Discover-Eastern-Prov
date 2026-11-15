@@ -2,14 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { sections } from '@/config/sections';
 import { useLang } from '@/i18n/LanguageContext';
-import { useBoothMode } from '@/state/BoothMode';
 import { Icon } from '@/components/ContentCards/Icon';
 import { Emblem } from './Emblem';
 import { QuickControls } from './QuickControls';
 
 export function Header() {
   const { t } = useLang();
-  const booth = useBoothMode();
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const menuBtn = useRef<HTMLButtonElement>(null);
@@ -47,7 +45,6 @@ export function Header() {
         </nav>
 
         <div className="header-actions">
-          {booth && <span className="booth-flag">{t('boothOn')}</span>}
           <Link to="/" className="icon-btn home-btn" aria-label={t('home')}><Icon name="home" /></Link>
           <QuickControls />
           <button

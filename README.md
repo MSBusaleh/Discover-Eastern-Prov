@@ -3,8 +3,8 @@
 A bilingual (Arabic-first) interactive website made for the Eastern Province booth of the
 **SPE KFUPM Student Chapter** at the university's Saudi National Day celebration (30 September 2026).
 
-> This is a prototype and not an official or endorsed SPE platform. Most content is marked
-> **draft** until the content team reviews it (see [Content status](#content-status)).
+> A project by the SPE Student Chapter at King Fahd University of Petroleum & Minerals. It is not an
+> official publication of SPE International or of any government body.
 
 ---
 
@@ -68,6 +68,7 @@ src/
 │   └── sections.ts        ← the tabs (order, icons, labels)
 ├── types/content.ts       ← the content model (start here)
 ├── assets/photos/         ← every photo, as WebP: timeline/, unification/, kings/, map/
+├── assets/brand/          ← the SPE KFUPM logo shown in the footer
 ├── data/                  ← all content, kept apart from components
 │   ├── locations/         LOC-xxx  places, with a sourced position for each marker;
 │   │                      images.json holds each place's photo and its credit
@@ -109,19 +110,14 @@ Every item has a `status`:
 
 | Status | Meaning |
 |---|---|
-| `demo` | Sample structure, not real content. Empty text shows "This content is on its way". |
-| `draft` | Real content that still needs a final review. The Timeline, Unification and Kings entries are drafts. |
-| `approved` | Final, reviewed content. |
+| `demo` | Sample structure (none is left on the site). |
+| `draft` | Real, sourced content. All of the current content is `draft`. |
+| `approved` | Content signed off by a reviewer. |
 
-Before the public launch, set this in `src/config/site.ts` so only approved items appear:
-
-```ts
-visibleStatuses: ['approved'],
-```
-
-Demo and draft items then disappear from every page, filter and link. For review sessions, set
-`showStatusBadges: true` to label drafts on screen. `npm run check:content` counts the items in each
-status.
+`visibleStatuses` in `src/config/site.ts` controls what is shown. It currently shows all three, which
+is what the published site needs. **Don't switch it to `['approved']`** unless you have marked items
+`approved` first: every section would otherwise go empty. Status labels are never shown to visitors
+(`showStatusBadges: false`); turn them on only for an internal review session.
 
 ### Where things live
 
@@ -140,8 +136,8 @@ page and every card stay in sync.
 
 ### Text
 
-Every text field is `{ "ar": "…", "en": "…" }`. An empty string means "not supplied yet" and shows a
-clearly marked placeholder line, never invented filler. A source's `title` and `publisher` can be
+Every text field is `{ "ar": "…", "en": "…" }`. An empty string shows nothing at all, so never leave
+one language empty by accident. A source's `title` and `publisher` can be
 either one string (when the source only has one language) or an `{ ar, en }` pair.
 
 ### Images
@@ -157,7 +153,8 @@ either one string (when the source only has one language) or an `{ ar, en }` pai
    Without a `credit`, the site falls back to `attribution`, then to the website's name.
 4. Add the image ID to the entry's `imageIds`.
 
-An image appears only when both reviews are `"approved"`; until then a labelled placeholder shows.
+An image appears only when both reviews are `"approved"`; until then a plain decorative panel in
+the site's own pattern shows (never an invented photograph).
 Its caption and source are shown under the image and on the Sources page.
 
 **How photos load quickly.** The 29 photos total about 2.2 MB (the originals were about 11 MB).
@@ -197,7 +194,7 @@ automatically gets the map filter **Saudi History & the Kings**.
 
 - Off by default; phones never turn it on by themselves.
 - On the booth screen, open the site once as `https://YOUR-SITE/?booth=1#/`. The device remembers
-  it, and a small "Booth mode on" tag appears in the header. `?booth=0` turns it off.
+  it (nothing visible changes except slightly larger text and buttons). `?booth=0` turns it off.
 - After **120 s** with no touch, key or scroll, a dialog counts down **15 s** with a large
   "Keep exploring" button. At zero the site returns to the home page in Arabic with the map reset.
 - Timings are in `siteConfig.booth` (`src/config/site.ts`).
@@ -224,9 +221,10 @@ automatically gets the map filter **Saudi History & the Kings**.
 - **Photo rights.** The 29 photos (Timeline, Unification, Kings and the 11 map places) come from the
   sources credited under each one and are marked approved so they display. Confirm the usage
   rights before the public launch.
-- **Temporary sources.** Map marker positions come from Wikipedia, Wikidata and an IRCICA heritage
-  record, tagged "Temporary source" on the Sources page. Replace them with official sources.
-- **Thaj (LOC-009):** Wikipedia and Wikidata place it about 5 km apart; its card says so.
+- **Map positions.** Marker positions come from Wikipedia, Wikidata and an IRCICA heritage record
+  (listed on the Sources page). Official sources would be stronger.
+- **Thaj (LOC-009):** Wikipedia and Wikidata place it about 5 km apart, so its marker may be off by a
+  few kilometres. This is not shown on screen.
 - **Terrain tiles** need internet. Offline, the bundled Map view is always available.
 - **Basemap** is Natural Earth 1:10m: Tarout Island is too small to be drawn (its marker sits
   correctly in the sea) and governorate boundaries are not shown.
@@ -238,15 +236,28 @@ automatically gets the map filter **Saudi History & the Kings**.
 
 ## 9. Deployment
 
-**Recommended: Netlify, Vercel, Cloudflare Pages or GitHub Pages (all have free tiers).**
+**Quickest (no account setup beyond a free login): Netlify Drop.**
 
-1. Push this folder to a GitHub repository.
-2. Connect the repository with build command `npm run build` and output directory `dist`.
-3. Use the HTTPS address you get for the QR code (you can deep-link, e.g. `…/#/kings`).
-4. Or drag the `dist/` folder onto Netlify Drop (<https://app.netlify.com/drop>).
+1. Run `npm run build` (or use the ready-made `dist/` folder).
+2. Open <https://app.netlify.com/drop> and drag the `dist/` folder onto the page.
+3. You get an address like `https://random-name.netlify.app`. Rename it under
+   *Site configuration → Change site name* (e.g. `discover-eastern-province.netlify.app`).
 
-Routing uses `#` links, so no redirect rules are needed. The map needs no API keys; the credits
-required by the tile provider are already shown on the map.
+**Recommended for later updates: connect a Git repository** (Netlify, Vercel or Cloudflare Pages):
+build command `npm run build`, output directory `dist`. Every push then republishes the site.
+
+**Link previews (WhatsApp, X, LinkedIn …).** The preview card is `public/og-image.jpg`. Social
+networks need its full address, which the build fills in automatically on Netlify, Vercel and
+Cloudflare Pages when they build the site. If you upload a pre-built `dist/` folder (Netlify Drop)
+or use another host, build with your final address first:
+
+```bash
+SITE_URL=https://your-site.netlify.app npm run build
+```
+
+Routing uses `#` links, so no redirect rules are needed, and deep links work (e.g. `…/#/kings`).
+The map needs no API keys. The icon set (`favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`) is
+in `public/`.
 
 ---
 
@@ -256,7 +267,12 @@ Visitors give the screen a few seconds, so each page has one title, one row of c
 content area:
 
 - The home page has no header bar: just the title, a tagline, a "Start exploring" button, the map
-  and a card per section. The header appears on every other page.
+  (opening on the area where the places are) and a card per section. The header appears on every
+  other page.
+- The footer credits the SPE KFUPM Student Chapter with its logo (`src/assets/brand/`), kept small
+  so "اكتشف الشرقية" stays the main identity. The logo sits on a white tile so it reads in dark mode.
+- Dark mode uses a deeper green (`--c-fill`) for solid buttons and selected items, so they don't
+  glare; text and outlines keep the brighter green.
 - Map filters are single-choice chips: one tap, one result.
 - Pages fade in, cards slide in, and detail panels cross-fade. All of it switches off for visitors
   who prefer reduced motion.
