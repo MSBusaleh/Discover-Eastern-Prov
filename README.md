@@ -90,12 +90,17 @@ src/
 │   ├── InteractiveMap/    MapView, LocationCard, LocationList, markers
 │   ├── Journey/           the row of stops + detail card shared by the Timeline and Kings pages
 │   ├── HistoricalTimeline/
-│   ├── ContentCards/      shared: MediaFrame (photo with caption and source, or a placeholder),
+│   ├── ContentCards/      shared: MediaFrame (photo with caption and source, or a decorative panel),
 │   │                      MapLinks ("View on map"), SourceList, Text, Icon, Chip, PageHeader, StatusBadge
 │   └── Booth/IdleReset.tsx
 ├── pages/                 one file per route
 └── styles/global.css      design tokens (light and dark) and all styles
-public/sw.js               service worker that caches photos in the browser
+public/
+├── fonts/                 the Saudi typeface (+ fonts.css)
+├── favicon.svg, favicon-32.png, apple-touch-icon.png   site icons (from the star emblem)
+├── og-image.jpg           1200×630 link-preview card
+├── sw.js                  service worker that caches photos in the browser
+└── _headers               cache rules for Netlify / Cloudflare Pages (vercel.json does the same on Vercel)
 scripts/check-content.ts   content checker
 scripts/optimize-images.mjs  photo pipeline (resize, WebP, blurred previews)
 ```
@@ -137,8 +142,8 @@ page and every card stay in sync.
 ### Text
 
 Every text field is `{ "ar": "…", "en": "…" }`. An empty string shows nothing at all, so never leave
-one language empty by accident. A source's `title` and `publisher` can be
-either one string (when the source only has one language) or an `{ ar, en }` pair.
+one language empty by accident. A source's `title` and `publisher` can be either one string (when
+the source only has one language) or an `{ ar, en }` pair.
 
 ### Images
 
@@ -228,13 +233,37 @@ automatically gets the map filter **Saudi History & the Kings**.
 - **Terrain tiles** need internet. Offline, the bundled Map view is always available.
 - **Basemap** is Natural Earth 1:10m: Tarout Island is too small to be drawn (its marker sits
   correctly in the sea) and governorate boundaries are not shown.
+- **Sources worth double-checking:** the 1999 opening of King Fahd International Airport has no
+  source; Saudi Aramco's 1988 founding is cited only to Aramco's terms-and-conditions page; the
+  my.gov.sa page used for Jubail could not be opened to confirm which agency it describes.
+- **Arabic letter shapes.** The Saudi typeface draws some letters in its own style (a wide, flat د
+  and a long lead-in stroke on an initial خ / ج), so words like «دخول» can look spaced. This is
+  the font's design, not a rendering fault; the font covers every character the site uses.
 - **Al-Awwal** heading font file is not included yet (see Technology).
 - **Not tested** on physical touchscreens, iOS Safari, Android or with screen readers. Please try
   the booth screen and a few phones before the event.
 
 ---
 
-## 9. Deployment
+## 9. How it was tested
+
+Automated in headless Microsoft Edge (November 2026):
+
+- Every page (home, map, a place, timeline, unification, kings, sources, a missing page) in Arabic
+  and English, light and dark, at desktop (1440 px), phone (390 px) and booth (1920 px, booth mode)
+  sizes: 132 page views with no console errors, no sideways scrolling, no broken images or links,
+  the footer at the bottom of short pages, and no development wording on screen.
+- Interactions: header, footer and mobile-menu navigation; language and theme buttons; timeline,
+  unification and kings controls; "View on map" focus mode and the back banner; map markers and the
+  Map/Terrain switch; photo loading; service-worker registration.
+- Booth mode: the countdown appears after 2 minutes idle and the site resets to the Arabic home page.
+- Offline: `dist-single/index.html` opened from disk with the network off shows the pages, the map,
+  the photos and the footer logo.
+- `npm run typecheck`, `npm run check:content`, `npm run build` and `npm run build:single` pass.
+
+---
+
+## 10. Deployment
 
 **Quickest (no account setup beyond a free login): Netlify Drop.**
 
@@ -261,7 +290,7 @@ in `public/`.
 
 ---
 
-## 10. Design notes for the booth
+## 11. Design notes for the booth
 
 Visitors give the screen a few seconds, so each page has one title, one row of choices and one
 content area:
